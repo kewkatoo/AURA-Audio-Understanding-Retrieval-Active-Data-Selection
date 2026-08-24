@@ -1,0 +1,46 @@
+# Tiny config for the 20-sample smoke test (scripts/prepare_data.py --config
+# configs/experiment.smoke.yaml). Same schema as experiment.yaml, just with
+# small sample_limit values and a separate output path so it never clobbers
+# the real dev-run cache/metadata/embeddings.
+dataset:
+  name: speech_commands_v0.02
+  root: ./data/raw
+  classes:
+    - yes
+    - no
+    - up
+    - down
+    - left
+    - right
+    - on
+    - off
+    - stop
+    - go
+  sample_limit:
+    train: 20
+    validation: 10
+    test: 10
+
+audio:
+  sample_rate: 16000
+  mono: true
+  normalize: true
+  vad: true
+  vad_frame_ms: 25.0
+  vad_hop_ms: 10.0
+  vad_energy_percentile: 50.0
+
+encoder:
+  name: wav2vec2
+  checkpoint: facebook/wav2vec2-base
+  pooling: mean
+  normalize: true
+  device: auto
+  batch_size: 4
+
+cache:
+  path: ./data/cache_smoke
+
+paths:
+  metadata_dir: ./data/metadata_smoke
+  embeddings_dir: ./data/embeddings_smoke

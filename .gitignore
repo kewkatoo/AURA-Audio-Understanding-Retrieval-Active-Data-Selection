@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Generated data
+data/
+*.parquet
+*.npy
+
+# Downloaded datasets
+*.zip
+*.tar
+*.tar.gz
+
+# Model/cache files
+.cache/
+huggingface/
+.huggingface/
+*.bin
+*.safetensors
+
+# Temporary files
+*.log
+phase1_error.txt
+test_gpu.py
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
