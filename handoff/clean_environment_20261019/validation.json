@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-19",
+  "interpreter": "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\venv\\reproduction-20261019\\Scripts\\python.exe",
+  "installed_lock_hash": "540fc1556420c62f972a1d173e0855674e3426c5b4c83b282ad717fea15c37e1",
+  "all_checks_passed": true,
+  "complete": true,
+  "checks": [
+    {
+      "name": "isolation",
+      "arguments": [
+        "-c",
+        "import json,sys; from pathlib import Path; print(json.dumps(dict(executable=sys.executable,prefix=sys.prefix,base_prefix=sys.base_prefix,path=sys.path),indent=2)); assert sys.prefix != sys.base_prefix; assert not any(Path(p).name == 'site-packages' and '.venv' in Path(p).parts for p in sys.path)"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "packages",
+      "arguments": [
+        "-m",
+        "pip",
+        "check"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "snapshot_and_versions",
+      "arguments": [
+        "scripts/verify_research_handoff.py",
+        "--environment"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "regression",
+      "arguments": [
+        "-m",
+        "pytest",
+        "-q",
+        "--junitxml=C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\handoff\\clean_environment_20261019\\tests.xml",
+        "-o",
+        "cache_dir=C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\handoff\\clean_environment_20261019\\pytest_cache"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "saved_v7_predictions",
+      "arguments": [
+        "-c",
+        "from pathlib import Path; from scripts.report_cost_confirmation import verify; verify(Path('results/cost_confirmation_v7')); print('All 60 saved v7 heads reproduce their predictions')"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "raw_encoder",
+      "arguments": [
+        "-c",
+        "import json; from dataclasses import asdict; import numpy as np; import pandas as pd; from aura.config import AuraConfig; from aura.encoders.wav2vec2 import Wav2Vec2Encoder; from experiments.raw_pipeline import encode_recordings; cfg=AuraConfig.from_yaml('configs/experiment.v2.yaml'); encoder=Wav2Vec2Encoder(batch_size=16); assert encoder.info.revision == '0b5b8e868dd84f03fd87d01f9c4ff0f080fecfe8'; assert encoder.info.device == 'cuda'; rows=json.load(open('results/cost_confirmation_v7/inventory.json'))[:2]; x=encode_recordings(pd.DataFrame(rows),encoder,cfg.audio); assert x.shape == (2,768) and np.isfinite(x).all() and np.allclose(np.linalg.norm(x,axis=1),1,atol=1e-4); print(json.dumps(dict(encoder=asdict(encoder.info),shape=list(x.shape),norms=np.linalg.norm(x,axis=1).tolist()),indent=2))"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "scope": "New isolated virtual environment on the same Windows machine; shared package-download cache, source, raw data and model cache. No retraining or new hardware replication."
+}

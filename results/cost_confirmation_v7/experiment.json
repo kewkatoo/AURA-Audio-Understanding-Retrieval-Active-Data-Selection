@@ -1,0 +1,51 @@
+{
+  "status": "complete",
+  "verification": {
+    "all_checks_passed": true,
+    "models": 60,
+    "primary_models": 36,
+    "paired_timing_trials": 36,
+    "paired_repeats": 18,
+    "raw_hashes_checked": 3000,
+    "speakers": 6,
+    "held_out_recordings": 3000,
+    "sessions": 1,
+    "protocol_hash": "afbc004a36613153ed9f2854742a8240a9d6c1631e9d3bda6880dc32b173143c",
+    "analysis_sources": {
+      "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\scripts\\report_cost_confirmation.py": "1b7dbb025eeba8970111e8882632ab01ba958becb1b8577a8384a7faae0fef17",
+      "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\scripts\\analyze_confirmation_uncertainty.py": "9ccaf276664a46da71b6f228d059f4124eb6a07a11e4d60573024a595144fd06"
+    }
+  },
+  "artifacts": {
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\cost_confirmation_v7\\accuracy_summary.json": "eeb9849daf420e61b61a70b5b9da118df9e2507d7badcb4d8e5fcf55d6b42a16",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\cost_confirmation_v7\\confirmation.png": "b9728fc39f51e24eae266cceec8e35b3e7a31ecc147b9257d18f660557e3ddeb",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\cost_confirmation_v7\\confirmation.svg": "9e261eb4c9656c7b4618296dd3629bd77a25d34a6fdf099e215819b708da03b9",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\cost_confirmation_v7\\DATASET_NOTICE.md": "cba03d3c298cbd64b3644800682f4da6ea605974a6bd3063b398b0be56937429",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\cost_confirmation_v7\\folds.json": "2bf20e1d05f262c1264e346cd6971d029dea82d4173108c9f172dc80c2763c9e",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\cost_confirmation_v7\\inventory.json": "9c70c866e1e0f0c5d3520731fd721dc8c10a6f5055c68497cf1c466d697453fc",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\cost_confirmation_v7\\models_locked.json": "53d14039f04724660fe53d12115f873097f599f87e45666beeb5872a73466fa7",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\cost_confirmation_v7\\predictions.csv.gz": "9e8f0d267c134d4f073e2c9224f1955123f8b198b8d3c31e4f7062c869d813d7",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\cost_confirmation_v7\\protocol.json": "afbc004a36613153ed9f2854742a8240a9d6c1631e9d3bda6880dc32b173143c",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\cost_confirmation_v7\\repeat_stability.csv": "5c7d873f36c4e10cc63ce02090e1dcdc641d060f8cebeb40a29d6406ed30e069",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\cost_confirmation_v7\\REPORT.md": "f27faf9aed99a47e1d6d77042aadd163e768a8ba20f8646596f5b612bc83fe2e",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\cost_confirmation_v7\\runs.csv": "88aa5a6f5e3af6d50d3e32f28110313a6841b9beda897da564c51483b6e93ff3",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\cost_confirmation_v7\\speaker_accuracy.csv": "272361c75b6940582020ea12c527f01a1b032d50762b215bdfa0c497594ee831",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\cost_confirmation_v7\\synthetic_warmup.wav": "0437bc0a198ee7767a93960735145a0bce500ea332b8a83ce163a99ef051a632",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\cost_confirmation_v7\\timing_by_speaker.csv": "1f038eeb62d0cdec4d9b0cafe0a4ad56da5a524ae435011a66a08b74e2166ed7",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\cost_confirmation_v7\\timing_pairs.csv": "536cd4af305cb39f9f61bd78f7cea430fc4df5b5d6719492a5b2507ce98580c5",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\cost_confirmation_v7\\timing_summary.json": "8131352d8db98e0cbc91ab29b4d9868d6452e41b374228e74567884a5685d904",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\cost_confirmation_v7\\verification.json": "efa5ba8cd53ae89b0a3e119ff352512eec105f2ca342102bba9a6f1082afca57",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\cost_confirmation_v7\\INTERPRETATION.md": "3eb10a37c0952069cac76f8fbd1195847e2a915e41db8424262b1cbe3bf7e22e"
+  },
+  "evaluation_manifests": {
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\cost_confirmation_v7\\evaluation\\george\\manifest.json": "53516c85cc74669c74b929e23a8153ed3abb3032ba7d77516f6fa53488cb5cd1",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\cost_confirmation_v7\\evaluation\\jackson\\manifest.json": "4c13c87f78d63dd874b50b7a1a483d241668de33a6ded96e9dc542d0b4e8f379",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\cost_confirmation_v7\\evaluation\\lucas\\manifest.json": "720882334dd9e896192890acde6dfc5bcb33f66219ab87e4d578701e3879b6d1",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\cost_confirmation_v7\\evaluation\\nicolas\\manifest.json": "3894eebfa21f5efd691f4a0e3a2671d0848a268f6f0387f7672df071a5139080",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\cost_confirmation_v7\\evaluation\\theo\\manifest.json": "f259fac07168c50afc547aea7bd3c5bd3318d414efa9904bb5f37dcc0cf45bba",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\cost_confirmation_v7\\evaluation\\yweweler\\manifest.json": "4b633d41bd42d22d4e7b1b178c2d376169e278303b618f22e1016c5e27c84b21"
+  },
+  "runtime_sessions": {
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\cost_confirmation_v7\\sessions\\2026-10-18T15-03-40.110065+00-00.json": "b727233ab386b6b524876a513b9ce9b2188b1917f7d4c85bdea368af590f3991"
+  }
+}

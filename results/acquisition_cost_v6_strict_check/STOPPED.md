@@ -1,0 +1,1 @@
+Stopped before model fitting or development scoring because a strict per-coordinate numerical equivalence check failed. Equal-length batch-size controls reproduce CUDA numerical differences. The amended protocol records drift, uses canonical frozen embeddings for accuracy and adds seed-zero sensitivity checks. This directory is excluded from final cost results.

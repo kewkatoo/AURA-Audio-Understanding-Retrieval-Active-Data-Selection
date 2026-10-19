@@ -1,0 +1,17 @@
+{
+  "identity": "926e994017ed3c3b",
+  "job": {
+    "strategy": "deduplicated_random",
+    "budget": 100,
+    "setting": "default",
+    "C": 1.0,
+    "source_budget": 100,
+    "seed": 0
+  },
+  "selection_seconds": 0.3312682999530807,
+  "fit_seconds": 0.13411879999330267,
+  "artifacts": {
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\duplicate_control_v5\\jobs\\deduplicated_random_B100_seed0\\selection.json": "468aab3c6d88447601edd2682365642d3a5b68da9ee0be4e12c6ec602d7debef",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\duplicate_control_v5\\jobs\\deduplicated_random_B100_seed0\\model.joblib": "c68c01db69edc2d8b20d59c87e220b7626178cb69547ae23a231be5f1a436906"
+  }
+}

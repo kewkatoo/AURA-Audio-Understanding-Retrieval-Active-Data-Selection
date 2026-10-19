@@ -1,0 +1,337 @@
+{
+  "config": {
+    "dataset": {
+      "name": "speech_commands_v0.02",
+      "classes": [
+        "yes",
+        "no",
+        "up",
+        "down",
+        "left",
+        "right",
+        "on",
+        "off",
+        "stop",
+        "go"
+      ],
+      "root": "./data/raw",
+      "sample_limit": {
+        "train": 2000,
+        "validation": 500,
+        "test": null
+      }
+    },
+    "audio": {
+      "sample_rate": 16000,
+      "mono": true,
+      "normalize": true,
+      "vad": true,
+      "vad_frame_ms": 25.0,
+      "vad_hop_ms": 10.0,
+      "vad_energy_percentile": 20.0,
+      "vad_noise_margin_db": 6.0,
+      "vad_min_rms": 0.001
+    },
+    "encoder": {
+      "name": "wav2vec2",
+      "checkpoint": "facebook/wav2vec2-base",
+      "pooling": "mean",
+      "normalize": true,
+      "device": "auto",
+      "batch_size": 16
+    },
+    "cache": {
+      "path": "./data/v2/cache"
+    },
+    "paths": {
+      "metadata_dir": "./data/v2/metadata",
+      "embeddings_dir": "./data/v2/embeddings"
+    }
+  },
+  "arguments": {
+    "config": "configs/experiment.v2.yaml",
+    "output_dir": "results/benchmark_v2",
+    "budgets": [
+      100,
+      200,
+      400,
+      800
+    ],
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "alphas": [
+      0,
+      0.25,
+      0.5,
+      0.75,
+      1
+    ],
+    "c_values": [
+      0.1,
+      1,
+      10
+    ]
+  },
+  "pipeline_version": "2",
+  "source_fingerprint": "da6d02ce267eb32b0f5daa30adbb1ffaf2e6a867d1b1161ef0cbf3becef26026",
+  "runtime_versions": {
+    "numpy": "1.26.4",
+    "scipy": "1.17.1",
+    "librosa": "0.11.0",
+    "soundfile": "0.14.0",
+    "torch": "2.6.0+cu126",
+    "torchaudio": "2.6.0+cu126",
+    "transformers": "4.57.6"
+  },
+  "sklearn_version": "1.9.0",
+  "script_hash": "982f5855696caefb03ce13c8431d1bcb2a2080a5a0db06d31d63ec20395771ad",
+  "split_manifests": {
+    "train": {
+      "pipeline_version": "2",
+      "source_fingerprint": "da6d02ce267eb32b0f5daa30adbb1ffaf2e6a867d1b1161ef0cbf3becef26026",
+      "runtime_versions": {
+        "numpy": "1.26.4",
+        "scipy": "1.17.1",
+        "librosa": "0.11.0",
+        "soundfile": "0.14.0",
+        "torch": "2.6.0+cu126",
+        "torchaudio": "2.6.0+cu126",
+        "transformers": "4.57.6"
+      },
+      "config": {
+        "dataset": {
+          "name": "speech_commands_v0.02",
+          "classes": [
+            "yes",
+            "no",
+            "up",
+            "down",
+            "left",
+            "right",
+            "on",
+            "off",
+            "stop",
+            "go"
+          ],
+          "root": "./data/raw",
+          "sample_limit": {
+            "train": 2000,
+            "validation": 500,
+            "test": null
+          }
+        },
+        "audio": {
+          "sample_rate": 16000,
+          "mono": true,
+          "normalize": true,
+          "vad": true,
+          "vad_frame_ms": 25.0,
+          "vad_hop_ms": 10.0,
+          "vad_energy_percentile": 20.0,
+          "vad_noise_margin_db": 6.0,
+          "vad_min_rms": 0.001
+        },
+        "encoder": {
+          "name": "wav2vec2",
+          "checkpoint": "facebook/wav2vec2-base",
+          "pooling": "mean",
+          "normalize": true,
+          "device": "auto",
+          "batch_size": 16
+        },
+        "cache": {
+          "path": "./data/v2/cache"
+        },
+        "paths": {
+          "metadata_dir": "./data/v2/metadata",
+          "embeddings_dir": "./data/v2/embeddings"
+        }
+      },
+      "encoder": {
+        "name": "wav2vec2",
+        "checkpoint": "facebook/wav2vec2-base",
+        "embedding_dim": 768,
+        "pooling": "mean",
+        "l2_normalized": true,
+        "device": "cuda",
+        "revision": "0b5b8e868dd84f03fd87d01f9c4ff0f080fecfe8"
+      },
+      "split": "train",
+      "samples": 2000,
+      "elapsed_seconds": 70.3028327000211,
+      "artifacts": {
+        "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\data\\v2\\metadata\\train.parquet": "1ea54b1f77f5638388bdbe18fa792cb196b98e09f3663584c8e509241384334f",
+        "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\data\\v2\\embeddings\\train.npy": "b8d0ea5bd1addf596db4e79ba6224362e0ff88ecd52f0623cacd34d157cc624d",
+        "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\data\\v2\\embeddings\\train_index.parquet": "ecf94b02638dea55cd0dda3a7d78811ea4b028a30e81484b5ef1bc2a729029a5",
+        "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\data\\v2\\metadata\\quality_norm_stats.json": "92f927ed9f6237866d6cc29168d5600b188fa7ecca5f6a0de45b65a04bd122c6"
+      }
+    },
+    "validation": {
+      "pipeline_version": "2",
+      "source_fingerprint": "da6d02ce267eb32b0f5daa30adbb1ffaf2e6a867d1b1161ef0cbf3becef26026",
+      "runtime_versions": {
+        "numpy": "1.26.4",
+        "scipy": "1.17.1",
+        "librosa": "0.11.0",
+        "soundfile": "0.14.0",
+        "torch": "2.6.0+cu126",
+        "torchaudio": "2.6.0+cu126",
+        "transformers": "4.57.6"
+      },
+      "config": {
+        "dataset": {
+          "name": "speech_commands_v0.02",
+          "classes": [
+            "yes",
+            "no",
+            "up",
+            "down",
+            "left",
+            "right",
+            "on",
+            "off",
+            "stop",
+            "go"
+          ],
+          "root": "./data/raw",
+          "sample_limit": {
+            "train": 2000,
+            "validation": 500,
+            "test": null
+          }
+        },
+        "audio": {
+          "sample_rate": 16000,
+          "mono": true,
+          "normalize": true,
+          "vad": true,
+          "vad_frame_ms": 25.0,
+          "vad_hop_ms": 10.0,
+          "vad_energy_percentile": 20.0,
+          "vad_noise_margin_db": 6.0,
+          "vad_min_rms": 0.001
+        },
+        "encoder": {
+          "name": "wav2vec2",
+          "checkpoint": "facebook/wav2vec2-base",
+          "pooling": "mean",
+          "normalize": true,
+          "device": "auto",
+          "batch_size": 16
+        },
+        "cache": {
+          "path": "./data/v2/cache"
+        },
+        "paths": {
+          "metadata_dir": "./data/v2/metadata",
+          "embeddings_dir": "./data/v2/embeddings"
+        }
+      },
+      "encoder": {
+        "name": "wav2vec2",
+        "checkpoint": "facebook/wav2vec2-base",
+        "embedding_dim": 768,
+        "pooling": "mean",
+        "l2_normalized": true,
+        "device": "cuda",
+        "revision": "0b5b8e868dd84f03fd87d01f9c4ff0f080fecfe8"
+      },
+      "split": "validation",
+      "samples": 500,
+      "elapsed_seconds": 17.169879000022775,
+      "artifacts": {
+        "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\data\\v2\\metadata\\validation.parquet": "30c40106532654ff0282fa0fc43af4cd1040e1b7557a7176c9e69c24ae45af1f",
+        "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\data\\v2\\embeddings\\validation.npy": "779485869009d86b202f8b971c9de7dfc21cd0a83a4e43f73f9c0abc6d051145",
+        "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\data\\v2\\embeddings\\validation_index.parquet": "c3bed3b5077cd655fe82902a43cc3cd390a16820413c1f79910a7b9f5dbd9c0d",
+        "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\data\\v2\\metadata\\quality_norm_stats.json": "92f927ed9f6237866d6cc29168d5600b188fa7ecca5f6a0de45b65a04bd122c6"
+      }
+    },
+    "test": {
+      "pipeline_version": "2",
+      "source_fingerprint": "da6d02ce267eb32b0f5daa30adbb1ffaf2e6a867d1b1161ef0cbf3becef26026",
+      "runtime_versions": {
+        "numpy": "1.26.4",
+        "scipy": "1.17.1",
+        "librosa": "0.11.0",
+        "soundfile": "0.14.0",
+        "torch": "2.6.0+cu126",
+        "torchaudio": "2.6.0+cu126",
+        "transformers": "4.57.6"
+      },
+      "config": {
+        "dataset": {
+          "name": "speech_commands_v0.02",
+          "classes": [
+            "yes",
+            "no",
+            "up",
+            "down",
+            "left",
+            "right",
+            "on",
+            "off",
+            "stop",
+            "go"
+          ],
+          "root": "./data/raw",
+          "sample_limit": {
+            "train": 2000,
+            "validation": 500,
+            "test": null
+          }
+        },
+        "audio": {
+          "sample_rate": 16000,
+          "mono": true,
+          "normalize": true,
+          "vad": true,
+          "vad_frame_ms": 25.0,
+          "vad_hop_ms": 10.0,
+          "vad_energy_percentile": 20.0,
+          "vad_noise_margin_db": 6.0,
+          "vad_min_rms": 0.001
+        },
+        "encoder": {
+          "name": "wav2vec2",
+          "checkpoint": "facebook/wav2vec2-base",
+          "pooling": "mean",
+          "normalize": true,
+          "device": "auto",
+          "batch_size": 16
+        },
+        "cache": {
+          "path": "./data/v2/cache"
+        },
+        "paths": {
+          "metadata_dir": "./data/v2/metadata",
+          "embeddings_dir": "./data/v2/embeddings"
+        }
+      },
+      "encoder": {
+        "name": "wav2vec2",
+        "checkpoint": "facebook/wav2vec2-base",
+        "embedding_dim": 768,
+        "pooling": "mean",
+        "l2_normalized": true,
+        "device": "cuda",
+        "revision": "0b5b8e868dd84f03fd87d01f9c4ff0f080fecfe8"
+      },
+      "split": "test",
+      "samples": 4074,
+      "elapsed_seconds": 107.4193801000074,
+      "artifacts": {
+        "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\data\\v2\\metadata\\test.parquet": "44c41edac3b8ac93007f83b190f012a326bcff4270cd4d1036441677c53d4e40",
+        "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\data\\v2\\embeddings\\test.npy": "01044003dbed7814bf4b7c2460892a9d93d40bff0c12c639b5e9901d8057061b",
+        "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\data\\v2\\embeddings\\test_index.parquet": "206dcf98f05917b4b5ae64ec9220224f5f81aa099b3a7f8fc509a9e0cd0ef66b",
+        "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\data\\v2\\metadata\\quality_norm_stats.json": "92f927ed9f6237866d6cc29168d5600b188fa7ecca5f6a0de45b65a04bd122c6"
+      }
+    }
+  },
+  "elapsed_seconds": 122.61541430000216,
+  "scope": "Offline label-aware selection on the configured candidate pool; frozen Wav2Vec2 linear probe"
+}

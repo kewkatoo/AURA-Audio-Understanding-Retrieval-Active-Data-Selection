@@ -45,8 +45,9 @@ class AudioConfig:
     # reproducibility and are referenced by aura/ingest/audio.py)
     vad_frame_ms: float = 25.0
     vad_hop_ms: float = 10.0
-    vad_energy_percentile: float = 50.0  # frames above this percentile of
-    # frame-energy are treated as "speech" for speech_ratio / trimming
+    vad_energy_percentile: float = 20.0  # noise-floor percentile
+    vad_noise_margin_db: float = 6.0
+    vad_min_rms: float = 0.001
 
 
 @dataclass
@@ -78,6 +79,26 @@ class AuraConfig:
     cache: CacheConfig = field(default_factory=CacheConfig)
     paths: PathsConfig = field(default_factory=PathsConfig)
 
+    def __post_init__(self):
+        if (not self.dataset.classes or any(not isinstance(c, str) for c in self.dataset.classes)
+                or len(set(self.dataset.classes)) != len(self.dataset.classes)):
+            raise ValueError("Dataset classes must be nonempty, unique strings")
+        for limit in (self.dataset.sample_limit.train, self.dataset.sample_limit.validation, self.dataset.sample_limit.test):
+            if limit is not None and (isinstance(limit, bool) or not isinstance(limit, int) or limit <= 0):
+                raise ValueError("Sample limits must be positive integers or null")
+        if self.audio.sample_rate <= 0 or self.audio.vad_frame_ms <= 0 or self.audio.vad_hop_ms <= 0:
+            raise ValueError("Sample rate and activity frame/hop lengths must be positive")
+        if (not 0 <= self.audio.vad_energy_percentile <= 100
+                or self.audio.vad_noise_margin_db < 0 or self.audio.vad_min_rms <= 0):
+            raise ValueError("Invalid activity threshold configuration")
+        if (isinstance(self.encoder.batch_size, bool) or not isinstance(self.encoder.batch_size, int)
+                or self.encoder.batch_size <= 0):
+            raise ValueError("Encoder batch size must be a positive integer")
+        if self.encoder.name != "wav2vec2" or self.encoder.pooling != "mean":
+            raise ValueError("Only the wav2vec2 encoder with mean pooling is supported")
+        if self.encoder.device not in {"auto", "cpu", "cuda"}:
+            raise ValueError("Encoder device must be auto, cpu, or cuda")
+
     @staticmethod
     def from_yaml(path: str | Path) -> "AuraConfig":
         with open(path, "r") as f:
@@ -107,6 +128,8 @@ class AuraConfig:
             vad_energy_percentile=audio_raw.get(
                 "vad_energy_percentile", AudioConfig.vad_energy_percentile
             ),
+            vad_noise_margin_db=audio_raw.get("vad_noise_margin_db", AudioConfig.vad_noise_margin_db),
+            vad_min_rms=audio_raw.get("vad_min_rms", AudioConfig.vad_min_rms),
         )
 
         encoder_raw = raw.get("encoder", {}) or {}

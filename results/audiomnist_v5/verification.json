@@ -1,0 +1,27 @@
+{
+  "all_checks_passed": true,
+  "models": 101,
+  "training_records": 22500,
+  "holdout_records": 7500,
+  "training_speakers": 45,
+  "holdout_speakers": 15,
+  "redundant_training_copies": 2,
+  "raw_hashes_checked": 30000,
+  "training_preparation_seconds": 536.1767475999659,
+  "python": "3.11.0 (main, Oct 24 2022, 18:26:48) [MSC v.1933 64 bit (AMD64)]",
+  "packages": {
+    "numpy": "1.26.4",
+    "scipy": "1.17.1",
+    "pandas": "3.0.5",
+    "scikit-learn": "1.9.0",
+    "joblib": "1.5.3",
+    "threadpoolctl": "3.6.0",
+    "torch": "2.6.0+cu126",
+    "torchaudio": "2.6.0+cu126",
+    "transformers": "4.57.6",
+    "librosa": "0.11.0",
+    "soundfile": "0.14.0"
+  },
+  "script_hash": "56a26251a4460e9192e9f523bec83ce30d8987ceca9234f023776870adf97c5d",
+  "protocol_hash": "55b7ca1128d429c1f4031d9f04edfc1ddfc99cf1a3210232489c6f1c61183a2c"
+}

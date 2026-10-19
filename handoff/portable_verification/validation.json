@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-19",
+  "relocated_verification": {
+    "passed": true,
+    "baseline_files": 2060,
+    "models": 60,
+    "primary_models": 36,
+    "speakers": 6,
+    "raw_hashes": 3000,
+    "mapped_paths": 3258
+  },
+  "negative_test": {
+    "passed": true,
+    "missing_copy_rejected": true,
+    "original_remained_accessible": true,
+    "copy_restored": true,
+    "exit_code": 1
+  },
+  "regression": {
+    "passed": 110,
+    "skipped": 1,
+    "warnings": 1
+  },
+  "copy_root": "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\venv\\relocated-evidence-20261019",
+  "scope": "Physical same-machine copy of baseline source/results and FSDD audio; v7 only; no training or new hardware."
+}

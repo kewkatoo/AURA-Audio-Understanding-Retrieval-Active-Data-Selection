@@ -1,0 +1,836 @@
+{
+  "partition_hash": "26036e77c08e7103a0e53f47296d415fb38d06724d644abdc6fd7fab8524c3cc",
+  "source_fingerprint": "da6d02ce267eb32b0f5daa30adbb1ffaf2e6a867d1b1161ef0cbf3becef26026",
+  "sources": {
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\scripts\\study_independent_dataset.py": "72c7d8b9f3402e926937b4733ca02a6940fffff687d849fc27707d7c4b4f8aa8",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\experiments\\deduplicated.py": "22da7cbeb9e5520a24f8344b6eea9068b63b4eb8379ef493ed93fb83dabb23fb",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\experiments\\representative.py": "62ebdc62c524f4dd1d75e781beb8ecc1ab68f9e7910b5ec3d394eaf690f7c316",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\scripts\\prepare_scaling_study.py": "eb821830b67e73dd0ea7d22909eff28fafd2b48600cc369d034e52cf9cfcc7ab",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\scripts\\evaluate_selection.py": "982f5855696caefb03ce13c8431d1bcb2a2080a5a0db06d31d63ec20395771ad",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\scripts\\benchmark_scaling_study.py": "1a0c822db4d4279c759efd59faac96af38b4754c79cb4b3807352d28bdeceb9d",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\experiments\\scaling.py": "5a1c4922c92775477b1816d3159f0e5edb2ce10853939623003e5f5ab9137c15"
+  },
+  "choices_hash": "56f9baeafbdee76a23c39ee4bfd8ea13a0529413eca8d5f671296b8748c21d80",
+  "runtime_versions": {
+    "numpy": "1.26.4",
+    "scipy": "1.17.1",
+    "librosa": "0.11.0",
+    "soundfile": "0.14.0",
+    "torch": "2.6.0+cu126",
+    "torchaudio": "2.6.0+cu126",
+    "transformers": "4.57.6"
+  },
+  "jobs": [
+    {
+      "strategy": "random",
+      "budget": 100,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 100,
+      "seed": 0
+    },
+    {
+      "strategy": "random",
+      "budget": 100,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 100,
+      "seed": 1
+    },
+    {
+      "strategy": "random",
+      "budget": 100,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 100,
+      "seed": 2
+    },
+    {
+      "strategy": "random",
+      "budget": 100,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 100,
+      "seed": 3
+    },
+    {
+      "strategy": "random",
+      "budget": 100,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 100,
+      "seed": 4
+    },
+    {
+      "strategy": "deduplicated_random",
+      "budget": 100,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 100,
+      "seed": 0
+    },
+    {
+      "strategy": "deduplicated_random",
+      "budget": 100,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 100,
+      "seed": 1
+    },
+    {
+      "strategy": "deduplicated_random",
+      "budget": 100,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 100,
+      "seed": 2
+    },
+    {
+      "strategy": "deduplicated_random",
+      "budget": 100,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 100,
+      "seed": 3
+    },
+    {
+      "strategy": "deduplicated_random",
+      "budget": 100,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 100,
+      "seed": 4
+    },
+    {
+      "strategy": "representative",
+      "budget": 100,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 100,
+      "seed": 0
+    },
+    {
+      "strategy": "representative",
+      "budget": 100,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 100,
+      "seed": 1
+    },
+    {
+      "strategy": "representative",
+      "budget": 100,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 100,
+      "seed": 2
+    },
+    {
+      "strategy": "representative",
+      "budget": 100,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 100,
+      "seed": 3
+    },
+    {
+      "strategy": "representative",
+      "budget": 100,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 100,
+      "seed": 4
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 100,
+      "setting": "retain=0.75",
+      "C": 1.0,
+      "source_budget": 100,
+      "seed": 0
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 100,
+      "setting": "retain=0.75",
+      "C": 1.0,
+      "source_budget": 100,
+      "seed": 1
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 100,
+      "setting": "retain=0.75",
+      "C": 1.0,
+      "source_budget": 100,
+      "seed": 2
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 100,
+      "setting": "retain=0.75",
+      "C": 1.0,
+      "source_budget": 100,
+      "seed": 3
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 100,
+      "setting": "retain=0.75",
+      "C": 1.0,
+      "source_budget": 100,
+      "seed": 4
+    },
+    {
+      "strategy": "random",
+      "budget": 200,
+      "setting": "default",
+      "C": 0.1,
+      "source_budget": 200,
+      "seed": 0
+    },
+    {
+      "strategy": "random",
+      "budget": 200,
+      "setting": "default",
+      "C": 0.1,
+      "source_budget": 200,
+      "seed": 1
+    },
+    {
+      "strategy": "random",
+      "budget": 200,
+      "setting": "default",
+      "C": 0.1,
+      "source_budget": 200,
+      "seed": 2
+    },
+    {
+      "strategy": "random",
+      "budget": 200,
+      "setting": "default",
+      "C": 0.1,
+      "source_budget": 200,
+      "seed": 3
+    },
+    {
+      "strategy": "random",
+      "budget": 200,
+      "setting": "default",
+      "C": 0.1,
+      "source_budget": 200,
+      "seed": 4
+    },
+    {
+      "strategy": "deduplicated_random",
+      "budget": 200,
+      "setting": "default",
+      "C": 0.1,
+      "source_budget": 200,
+      "seed": 0
+    },
+    {
+      "strategy": "deduplicated_random",
+      "budget": 200,
+      "setting": "default",
+      "C": 0.1,
+      "source_budget": 200,
+      "seed": 1
+    },
+    {
+      "strategy": "deduplicated_random",
+      "budget": 200,
+      "setting": "default",
+      "C": 0.1,
+      "source_budget": 200,
+      "seed": 2
+    },
+    {
+      "strategy": "deduplicated_random",
+      "budget": 200,
+      "setting": "default",
+      "C": 0.1,
+      "source_budget": 200,
+      "seed": 3
+    },
+    {
+      "strategy": "deduplicated_random",
+      "budget": 200,
+      "setting": "default",
+      "C": 0.1,
+      "source_budget": 200,
+      "seed": 4
+    },
+    {
+      "strategy": "representative",
+      "budget": 200,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 200,
+      "seed": 0
+    },
+    {
+      "strategy": "representative",
+      "budget": 200,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 200,
+      "seed": 1
+    },
+    {
+      "strategy": "representative",
+      "budget": 200,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 200,
+      "seed": 2
+    },
+    {
+      "strategy": "representative",
+      "budget": 200,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 200,
+      "seed": 3
+    },
+    {
+      "strategy": "representative",
+      "budget": 200,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 200,
+      "seed": 4
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 200,
+      "setting": "retain=0.9",
+      "C": 1.0,
+      "source_budget": 200,
+      "seed": 0
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 200,
+      "setting": "retain=0.9",
+      "C": 1.0,
+      "source_budget": 200,
+      "seed": 1
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 200,
+      "setting": "retain=0.9",
+      "C": 1.0,
+      "source_budget": 200,
+      "seed": 2
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 200,
+      "setting": "retain=0.9",
+      "C": 1.0,
+      "source_budget": 200,
+      "seed": 3
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 200,
+      "setting": "retain=0.9",
+      "C": 1.0,
+      "source_budget": 200,
+      "seed": 4
+    },
+    {
+      "strategy": "random",
+      "budget": 400,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 400,
+      "seed": 0
+    },
+    {
+      "strategy": "random",
+      "budget": 400,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 400,
+      "seed": 1
+    },
+    {
+      "strategy": "random",
+      "budget": 400,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 400,
+      "seed": 2
+    },
+    {
+      "strategy": "random",
+      "budget": 400,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 400,
+      "seed": 3
+    },
+    {
+      "strategy": "random",
+      "budget": 400,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 400,
+      "seed": 4
+    },
+    {
+      "strategy": "deduplicated_random",
+      "budget": 400,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 400,
+      "seed": 0
+    },
+    {
+      "strategy": "deduplicated_random",
+      "budget": 400,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 400,
+      "seed": 1
+    },
+    {
+      "strategy": "deduplicated_random",
+      "budget": 400,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 400,
+      "seed": 2
+    },
+    {
+      "strategy": "deduplicated_random",
+      "budget": 400,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 400,
+      "seed": 3
+    },
+    {
+      "strategy": "deduplicated_random",
+      "budget": 400,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 400,
+      "seed": 4
+    },
+    {
+      "strategy": "representative",
+      "budget": 400,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 400,
+      "seed": 0
+    },
+    {
+      "strategy": "representative",
+      "budget": 400,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 400,
+      "seed": 1
+    },
+    {
+      "strategy": "representative",
+      "budget": 400,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 400,
+      "seed": 2
+    },
+    {
+      "strategy": "representative",
+      "budget": 400,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 400,
+      "seed": 3
+    },
+    {
+      "strategy": "representative",
+      "budget": 400,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 400,
+      "seed": 4
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 400,
+      "setting": "retain=0.75",
+      "C": 1.0,
+      "source_budget": 400,
+      "seed": 0
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 400,
+      "setting": "retain=0.75",
+      "C": 1.0,
+      "source_budget": 400,
+      "seed": 1
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 400,
+      "setting": "retain=0.75",
+      "C": 1.0,
+      "source_budget": 400,
+      "seed": 2
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 400,
+      "setting": "retain=0.75",
+      "C": 1.0,
+      "source_budget": 400,
+      "seed": 3
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 400,
+      "setting": "retain=0.75",
+      "C": 1.0,
+      "source_budget": 400,
+      "seed": 4
+    },
+    {
+      "strategy": "random",
+      "budget": 800,
+      "setting": "default",
+      "C": 0.1,
+      "source_budget": 800,
+      "seed": 0
+    },
+    {
+      "strategy": "random",
+      "budget": 800,
+      "setting": "default",
+      "C": 0.1,
+      "source_budget": 800,
+      "seed": 1
+    },
+    {
+      "strategy": "random",
+      "budget": 800,
+      "setting": "default",
+      "C": 0.1,
+      "source_budget": 800,
+      "seed": 2
+    },
+    {
+      "strategy": "random",
+      "budget": 800,
+      "setting": "default",
+      "C": 0.1,
+      "source_budget": 800,
+      "seed": 3
+    },
+    {
+      "strategy": "random",
+      "budget": 800,
+      "setting": "default",
+      "C": 0.1,
+      "source_budget": 800,
+      "seed": 4
+    },
+    {
+      "strategy": "deduplicated_random",
+      "budget": 800,
+      "setting": "default",
+      "C": 0.1,
+      "source_budget": 800,
+      "seed": 0
+    },
+    {
+      "strategy": "deduplicated_random",
+      "budget": 800,
+      "setting": "default",
+      "C": 0.1,
+      "source_budget": 800,
+      "seed": 1
+    },
+    {
+      "strategy": "deduplicated_random",
+      "budget": 800,
+      "setting": "default",
+      "C": 0.1,
+      "source_budget": 800,
+      "seed": 2
+    },
+    {
+      "strategy": "deduplicated_random",
+      "budget": 800,
+      "setting": "default",
+      "C": 0.1,
+      "source_budget": 800,
+      "seed": 3
+    },
+    {
+      "strategy": "deduplicated_random",
+      "budget": 800,
+      "setting": "default",
+      "C": 0.1,
+      "source_budget": 800,
+      "seed": 4
+    },
+    {
+      "strategy": "representative",
+      "budget": 800,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 800,
+      "seed": 0
+    },
+    {
+      "strategy": "representative",
+      "budget": 800,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 800,
+      "seed": 1
+    },
+    {
+      "strategy": "representative",
+      "budget": 800,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 800,
+      "seed": 2
+    },
+    {
+      "strategy": "representative",
+      "budget": 800,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 800,
+      "seed": 3
+    },
+    {
+      "strategy": "representative",
+      "budget": 800,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 800,
+      "seed": 4
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 800,
+      "setting": "retain=0.75",
+      "C": 1.0,
+      "source_budget": 800,
+      "seed": 0
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 800,
+      "setting": "retain=0.75",
+      "C": 1.0,
+      "source_budget": 800,
+      "seed": 1
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 800,
+      "setting": "retain=0.75",
+      "C": 1.0,
+      "source_budget": 800,
+      "seed": 2
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 800,
+      "setting": "retain=0.75",
+      "C": 1.0,
+      "source_budget": 800,
+      "seed": 3
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 800,
+      "setting": "retain=0.75",
+      "C": 1.0,
+      "source_budget": 800,
+      "seed": 4
+    },
+    {
+      "strategy": "random",
+      "budget": 1600,
+      "setting": "default",
+      "C": 0.1,
+      "source_budget": 800,
+      "seed": 0
+    },
+    {
+      "strategy": "random",
+      "budget": 1600,
+      "setting": "default",
+      "C": 0.1,
+      "source_budget": 800,
+      "seed": 1
+    },
+    {
+      "strategy": "random",
+      "budget": 1600,
+      "setting": "default",
+      "C": 0.1,
+      "source_budget": 800,
+      "seed": 2
+    },
+    {
+      "strategy": "random",
+      "budget": 1600,
+      "setting": "default",
+      "C": 0.1,
+      "source_budget": 800,
+      "seed": 3
+    },
+    {
+      "strategy": "random",
+      "budget": 1600,
+      "setting": "default",
+      "C": 0.1,
+      "source_budget": 800,
+      "seed": 4
+    },
+    {
+      "strategy": "deduplicated_random",
+      "budget": 1600,
+      "setting": "default",
+      "C": 0.1,
+      "source_budget": 800,
+      "seed": 0
+    },
+    {
+      "strategy": "deduplicated_random",
+      "budget": 1600,
+      "setting": "default",
+      "C": 0.1,
+      "source_budget": 800,
+      "seed": 1
+    },
+    {
+      "strategy": "deduplicated_random",
+      "budget": 1600,
+      "setting": "default",
+      "C": 0.1,
+      "source_budget": 800,
+      "seed": 2
+    },
+    {
+      "strategy": "deduplicated_random",
+      "budget": 1600,
+      "setting": "default",
+      "C": 0.1,
+      "source_budget": 800,
+      "seed": 3
+    },
+    {
+      "strategy": "deduplicated_random",
+      "budget": 1600,
+      "setting": "default",
+      "C": 0.1,
+      "source_budget": 800,
+      "seed": 4
+    },
+    {
+      "strategy": "representative",
+      "budget": 1600,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 800,
+      "seed": 0
+    },
+    {
+      "strategy": "representative",
+      "budget": 1600,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 800,
+      "seed": 1
+    },
+    {
+      "strategy": "representative",
+      "budget": 1600,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 800,
+      "seed": 2
+    },
+    {
+      "strategy": "representative",
+      "budget": 1600,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 800,
+      "seed": 3
+    },
+    {
+      "strategy": "representative",
+      "budget": 1600,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 800,
+      "seed": 4
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 1600,
+      "setting": "retain=0.75",
+      "C": 1.0,
+      "source_budget": 800,
+      "seed": 0
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 1600,
+      "setting": "retain=0.75",
+      "C": 1.0,
+      "source_budget": 800,
+      "seed": 1
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 1600,
+      "setting": "retain=0.75",
+      "C": 1.0,
+      "source_budget": 800,
+      "seed": 2
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 1600,
+      "setting": "retain=0.75",
+      "C": 1.0,
+      "source_budget": 800,
+      "seed": 3
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 1600,
+      "setting": "retain=0.75",
+      "C": 1.0,
+      "source_budget": 800,
+      "seed": 4
+    },
+    {
+      "strategy": "full_pool",
+      "budget": 22500,
+      "seed": 0,
+      "C": 10.0,
+      "setting": "default"
+    }
+  ],
+  "purpose": "independent dataset transfer",
+  "tuning": "none; settings transferred from Speech Commands v3; dedup uses random C",
+  "primary_comparison": "representative minus deduplicated_random at budget 100",
+  "uncertainty": "paired speaker bootstrap, fixed five selection seeds; exploratory, unadjusted"
+}

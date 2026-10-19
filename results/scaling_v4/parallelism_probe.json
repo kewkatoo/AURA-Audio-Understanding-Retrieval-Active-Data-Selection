@@ -1,0 +1,22 @@
+{
+  "scope": "training-only runtime probe; no selection parameters or evaluation outcomes changed",
+  "rows": 2912,
+  "clusters": 80,
+  "results": [
+    {
+      "threads": 2,
+      "seconds": 5.840102299989667,
+      "inertia": 358.66412353515625
+    },
+    {
+      "threads": 4,
+      "seconds": 5.287084299954586,
+      "inertia": 358.66412353515625
+    },
+    {
+      "threads": 8,
+      "seconds": 5.402451700007077,
+      "inertia": 358.66424560546875
+    }
+  ]
+}

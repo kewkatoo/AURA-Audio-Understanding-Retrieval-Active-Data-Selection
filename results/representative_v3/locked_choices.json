@@ -1,0 +1,177 @@
+[
+  {
+    "strategy": "random",
+    "budget": 100,
+    "setting": "default",
+    "C": 1.0,
+    "mean_validation_accuracy": 0.5608000000000001
+  },
+  {
+    "strategy": "quality",
+    "budget": 100,
+    "setting": "default",
+    "C": 1.0,
+    "mean_validation_accuracy": 0.536
+  },
+  {
+    "strategy": "diversity",
+    "budget": 100,
+    "setting": "default",
+    "C": 1.0,
+    "mean_validation_accuracy": 0.3952
+  },
+  {
+    "strategy": "combined",
+    "budget": 100,
+    "setting": "alpha=1",
+    "C": 1.0,
+    "mean_validation_accuracy": 0.536
+  },
+  {
+    "strategy": "representative",
+    "budget": 100,
+    "setting": "default",
+    "C": 1.0,
+    "mean_validation_accuracy": 0.5871999999999999
+  },
+  {
+    "strategy": "quality_representative",
+    "budget": 100,
+    "setting": "retain=0.75",
+    "C": 1.0,
+    "mean_validation_accuracy": 0.6148
+  },
+  {
+    "strategy": "random",
+    "budget": 200,
+    "setting": "default",
+    "C": 0.1,
+    "mean_validation_accuracy": 0.6564
+  },
+  {
+    "strategy": "quality",
+    "budget": 200,
+    "setting": "default",
+    "C": 1.0,
+    "mean_validation_accuracy": 0.638
+  },
+  {
+    "strategy": "diversity",
+    "budget": 200,
+    "setting": "default",
+    "C": 1.0,
+    "mean_validation_accuracy": 0.5284000000000001
+  },
+  {
+    "strategy": "combined",
+    "budget": 200,
+    "setting": "alpha=1",
+    "C": 1.0,
+    "mean_validation_accuracy": 0.638
+  },
+  {
+    "strategy": "representative",
+    "budget": 200,
+    "setting": "default",
+    "C": 1.0,
+    "mean_validation_accuracy": 0.6664000000000001
+  },
+  {
+    "strategy": "quality_representative",
+    "budget": 200,
+    "setting": "retain=0.9",
+    "C": 1.0,
+    "mean_validation_accuracy": 0.6788000000000001
+  },
+  {
+    "strategy": "random",
+    "budget": 400,
+    "setting": "default",
+    "C": 1.0,
+    "mean_validation_accuracy": 0.724
+  },
+  {
+    "strategy": "quality",
+    "budget": 400,
+    "setting": "default",
+    "C": 1.0,
+    "mean_validation_accuracy": 0.68
+  },
+  {
+    "strategy": "diversity",
+    "budget": 400,
+    "setting": "default",
+    "C": 1.0,
+    "mean_validation_accuracy": 0.678
+  },
+  {
+    "strategy": "combined",
+    "budget": 400,
+    "setting": "alpha=0.25",
+    "C": 1.0,
+    "mean_validation_accuracy": 0.73
+  },
+  {
+    "strategy": "representative",
+    "budget": 400,
+    "setting": "default",
+    "C": 1.0,
+    "mean_validation_accuracy": 0.7508
+  },
+  {
+    "strategy": "quality_representative",
+    "budget": 400,
+    "setting": "retain=0.75",
+    "C": 1.0,
+    "mean_validation_accuracy": 0.7436
+  },
+  {
+    "strategy": "random",
+    "budget": 800,
+    "setting": "default",
+    "C": 0.1,
+    "mean_validation_accuracy": 0.7944000000000001
+  },
+  {
+    "strategy": "quality",
+    "budget": 800,
+    "setting": "default",
+    "C": 1.0,
+    "mean_validation_accuracy": 0.764
+  },
+  {
+    "strategy": "diversity",
+    "budget": 800,
+    "setting": "default",
+    "C": 1.0,
+    "mean_validation_accuracy": 0.7932
+  },
+  {
+    "strategy": "combined",
+    "budget": 800,
+    "setting": "alpha=0.25",
+    "C": 0.1,
+    "mean_validation_accuracy": 0.8019999999999999
+  },
+  {
+    "strategy": "representative",
+    "budget": 800,
+    "setting": "default",
+    "C": 1.0,
+    "mean_validation_accuracy": 0.7932
+  },
+  {
+    "strategy": "quality_representative",
+    "budget": 800,
+    "setting": "retain=0.75",
+    "C": 1.0,
+    "mean_validation_accuracy": 0.7988000000000001
+  },
+  {
+    "strategy": "full_pool",
+    "budget": 2000,
+    "setting": "default",
+    "C": 10.0,
+    "mean_validation_accuracy": 0.846
+  }
+]

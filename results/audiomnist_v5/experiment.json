@@ -1,0 +1,51 @@
+{
+  "status": "complete",
+  "verification": {
+    "all_checks_passed": true,
+    "models": 101,
+    "training_records": 22500,
+    "holdout_records": 7500,
+    "training_speakers": 45,
+    "holdout_speakers": 15,
+    "redundant_training_copies": 2,
+    "raw_hashes_checked": 30000,
+    "training_preparation_seconds": 536.1767475999659,
+    "python": "3.11.0 (main, Oct 24 2022, 18:26:48) [MSC v.1933 64 bit (AMD64)]",
+    "packages": {
+      "numpy": "1.26.4",
+      "scipy": "1.17.1",
+      "pandas": "3.0.5",
+      "scikit-learn": "1.9.0",
+      "joblib": "1.5.3",
+      "threadpoolctl": "3.6.0",
+      "torch": "2.6.0+cu126",
+      "torchaudio": "2.6.0+cu126",
+      "transformers": "4.57.6",
+      "librosa": "0.11.0",
+      "soundfile": "0.14.0"
+    },
+    "script_hash": "56a26251a4460e9192e9f523bec83ce30d8987ceca9234f023776870adf97c5d",
+    "protocol_hash": "55b7ca1128d429c1f4031d9f04edfc1ddfc99cf1a3210232489c6f1c61183a2c"
+  },
+  "artifacts": {
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\audiomnist_v5\\analysis_manifest.json": "3545be30945ad3adc1ceed23eded118041c66457dbd04af474edc68054ac6500",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\audiomnist_v5\\comparison.png": "30036e45a8be2fb9b88f2fbfa3ae5bbc7dadd1bbfcee73934f9c98074015908c",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\audiomnist_v5\\comparison.svg": "b2acf5a4797c73e104717665abdab292628944f99b4d0eac18f8bc6e2357dc04",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\audiomnist_v5\\comparison_summary.csv": "97bfda1a7167cdd61b9413a79e85e4ea670023ab2923d49992b26322bc09c1ee",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\audiomnist_v5\\execution.json": "c2dfa72faebe0df057fd0f6345565c0ee3b58d01d15f3cd8e82c8b26f7f57383",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\audiomnist_v5\\INTERPRETATION.md": "f9ab64bc53210bf65855563a04f8377b894fbef2bedc117102282d6f01b9821c",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\audiomnist_v5\\models_locked.json": "2943e7b0afead850299f3e120dfd0051598ababa2c9a69b3f2fbcac42b81e8c4",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\audiomnist_v5\\observed_costs.csv": "be8095c18675761363801f5b4c6cf5ab8a3b01657d3ee53799e824ee29b145cd",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\audiomnist_v5\\predictions.csv.gz": "80ab733ed06998dbc4ce7a968e5c4cf9fa12c51f71623277775ad0532e3cdaae",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\audiomnist_v5\\protocol.json": "55b7ca1128d429c1f4031d9f04edfc1ddfc99cf1a3210232489c6f1c61183a2c",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\audiomnist_v5\\REPORT.md": "d2e1f8b0459c0e5d0cdc142ff7c3ade33c74410246bc1bf3d5db3356f2c1ae43",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\audiomnist_v5\\runs.csv": "4322882edb2fad659ae6fbac05dfc0671e1cc2e6103cf4dc3f737bf32682b6cc",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\audiomnist_v5\\speaker_bootstrap.csv": "c04bda2141b4e4e8e6e77c344613e48049ec5fc24233f5ff3c30351829628822",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\audiomnist_v5\\summary.csv": "e80751abb688ad3bf3744d7fe5afe3c3bd8d1ee08b426f60e13813920cceee3e",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\audiomnist_v5\\verification.json": "6fd200786b1f04e873898fc8f0784b40dd9a54438c1dfa0ce19f77769cf00aea"
+  },
+  "data_manifests": {
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\data\\audiomnist_v5\\metadata\\train_manifest.json": "d803bbcd7e6f45477d6b283fabf06679b1793755abcc6166e6dbc3b77c08460b",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\data\\audiomnist_v5\\metadata\\holdout_manifest.json": "e7a23d2303812c94654f6965f2e3a9aa14a13ca00caeea24f780669f1ceb6176"
+  }
+}

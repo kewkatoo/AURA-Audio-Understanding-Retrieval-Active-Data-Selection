@@ -1,0 +1,16 @@
+{
+  "all_checks_passed": true,
+  "models": 60,
+  "primary_models": 36,
+  "paired_timing_trials": 36,
+  "paired_repeats": 18,
+  "raw_hashes_checked": 3000,
+  "speakers": 6,
+  "held_out_recordings": 3000,
+  "sessions": 1,
+  "protocol_hash": "afbc004a36613153ed9f2854742a8240a9d6c1631e9d3bda6880dc32b173143c",
+  "analysis_sources": {
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\scripts\\report_cost_confirmation.py": "1b7dbb025eeba8970111e8882632ab01ba958becb1b8577a8384a7faae0fef17",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\scripts\\analyze_confirmation_uncertainty.py": "9ccaf276664a46da71b6f228d059f4124eb6a07a11e4d60573024a595144fd06"
+  }
+}

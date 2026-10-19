@@ -1,0 +1,41 @@
+{
+  "arguments": {
+    "config": "configs/experiment.v2.yaml",
+    "output_dir": "results/representative_v3",
+    "budgets": [
+      100,
+      200,
+      400,
+      800
+    ],
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "c_values": [
+      0.1,
+      1,
+      10
+    ],
+    "alphas": [
+      0,
+      0.25,
+      0.5,
+      0.75,
+      1
+    ],
+    "retain_fractions": [
+      0.5,
+      0.75,
+      0.9
+    ]
+  },
+  "confirmation_rule": "all official-validation speakers absent from train and existing tuning",
+  "selection_rule": "mean tuning accuracy, then macro-F1, then lexical setting and lower C",
+  "previous_test_set": "not opened or used in this study",
+  "script_hash": "17f6cd6ede53a40271e5e8c95fc9d8034723cf20c1a797a72434584db6268ed6",
+  "selector_hash": "62ebdc62c524f4dd1d75e781beb8ecc1ab68f9e7910b5ec3d394eaf690f7c316"
+}

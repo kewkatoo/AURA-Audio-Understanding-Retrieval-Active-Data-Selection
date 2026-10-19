@@ -1,0 +1,8 @@
+{
+  "command": ".venv/Scripts/python.exe scripts/study_independent_dataset.py",
+  "workers": 4,
+  "threads_per_worker": 2,
+  "dataset_preparation_device": "cuda",
+  "hardware": "NVIDIA RTX 4050 Laptop GPU; AMD Ryzen 7 7435HS; 24 GB RAM",
+  "timing_limitation": "Concurrent jobs share hardware. Recorded job times are not a controlled algorithm-speed comparison."
+}

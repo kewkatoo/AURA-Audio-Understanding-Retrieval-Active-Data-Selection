@@ -1,0 +1,457 @@
+{
+  "protocol": {
+    "partition_hash": "8a9db369ae372856aec933f11d9ba551934da3502c55814384ad4b9f3e530e9e",
+    "arguments": {
+      "config": "configs/experiment.v2.yaml",
+      "data_root": "data/scaling_v4",
+      "output_dir": "results/scaling_v4",
+      "prior_choices": "results/representative_v3/locked_choices.json",
+      "budgets": [
+        100,
+        200,
+        400,
+        800,
+        1600
+      ],
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "strategies": [
+        "random",
+        "quality",
+        "diversity",
+        "combined",
+        "representative",
+        "quality_representative"
+      ],
+      "chunk_size": 500
+    },
+    "jobs": [
+      {
+        "strategy": "random",
+        "budget": 100,
+        "setting": "default",
+        "C": 1.0,
+        "source_budget": 100
+      },
+      {
+        "strategy": "quality",
+        "budget": 100,
+        "setting": "default",
+        "C": 1.0,
+        "source_budget": 100
+      },
+      {
+        "strategy": "diversity",
+        "budget": 100,
+        "setting": "default",
+        "C": 1.0,
+        "source_budget": 100
+      },
+      {
+        "strategy": "combined",
+        "budget": 100,
+        "setting": "alpha=1",
+        "C": 1.0,
+        "source_budget": 100
+      },
+      {
+        "strategy": "representative",
+        "budget": 100,
+        "setting": "default",
+        "C": 1.0,
+        "source_budget": 100
+      },
+      {
+        "strategy": "quality_representative",
+        "budget": 100,
+        "setting": "retain=0.75",
+        "C": 1.0,
+        "source_budget": 100
+      },
+      {
+        "strategy": "random",
+        "budget": 200,
+        "setting": "default",
+        "C": 0.1,
+        "source_budget": 200
+      },
+      {
+        "strategy": "quality",
+        "budget": 200,
+        "setting": "default",
+        "C": 1.0,
+        "source_budget": 200
+      },
+      {
+        "strategy": "diversity",
+        "budget": 200,
+        "setting": "default",
+        "C": 1.0,
+        "source_budget": 200
+      },
+      {
+        "strategy": "combined",
+        "budget": 200,
+        "setting": "alpha=1",
+        "C": 1.0,
+        "source_budget": 200
+      },
+      {
+        "strategy": "representative",
+        "budget": 200,
+        "setting": "default",
+        "C": 1.0,
+        "source_budget": 200
+      },
+      {
+        "strategy": "quality_representative",
+        "budget": 200,
+        "setting": "retain=0.9",
+        "C": 1.0,
+        "source_budget": 200
+      },
+      {
+        "strategy": "random",
+        "budget": 400,
+        "setting": "default",
+        "C": 1.0,
+        "source_budget": 400
+      },
+      {
+        "strategy": "quality",
+        "budget": 400,
+        "setting": "default",
+        "C": 1.0,
+        "source_budget": 400
+      },
+      {
+        "strategy": "diversity",
+        "budget": 400,
+        "setting": "default",
+        "C": 1.0,
+        "source_budget": 400
+      },
+      {
+        "strategy": "combined",
+        "budget": 400,
+        "setting": "alpha=0.25",
+        "C": 1.0,
+        "source_budget": 400
+      },
+      {
+        "strategy": "representative",
+        "budget": 400,
+        "setting": "default",
+        "C": 1.0,
+        "source_budget": 400
+      },
+      {
+        "strategy": "quality_representative",
+        "budget": 400,
+        "setting": "retain=0.75",
+        "C": 1.0,
+        "source_budget": 400
+      },
+      {
+        "strategy": "random",
+        "budget": 800,
+        "setting": "default",
+        "C": 0.1,
+        "source_budget": 800
+      },
+      {
+        "strategy": "quality",
+        "budget": 800,
+        "setting": "default",
+        "C": 1.0,
+        "source_budget": 800
+      },
+      {
+        "strategy": "diversity",
+        "budget": 800,
+        "setting": "default",
+        "C": 1.0,
+        "source_budget": 800
+      },
+      {
+        "strategy": "combined",
+        "budget": 800,
+        "setting": "alpha=0.25",
+        "C": 0.1,
+        "source_budget": 800
+      },
+      {
+        "strategy": "representative",
+        "budget": 800,
+        "setting": "default",
+        "C": 1.0,
+        "source_budget": 800
+      },
+      {
+        "strategy": "quality_representative",
+        "budget": 800,
+        "setting": "retain=0.75",
+        "C": 1.0,
+        "source_budget": 800
+      },
+      {
+        "strategy": "random",
+        "budget": 1600,
+        "setting": "default",
+        "C": 0.1,
+        "source_budget": 800
+      },
+      {
+        "strategy": "quality",
+        "budget": 1600,
+        "setting": "default",
+        "C": 1.0,
+        "source_budget": 800
+      },
+      {
+        "strategy": "diversity",
+        "budget": 1600,
+        "setting": "default",
+        "C": 1.0,
+        "source_budget": 800
+      },
+      {
+        "strategy": "combined",
+        "budget": 1600,
+        "setting": "alpha=0.25",
+        "C": 0.1,
+        "source_budget": 800
+      },
+      {
+        "strategy": "representative",
+        "budget": 1600,
+        "setting": "default",
+        "C": 1.0,
+        "source_budget": 800
+      },
+      {
+        "strategy": "quality_representative",
+        "budget": 1600,
+        "setting": "retain=0.75",
+        "C": 1.0,
+        "source_budget": 800
+      },
+      {
+        "strategy": "full_pool",
+        "budget": 28755,
+        "setting": "default",
+        "C": 10.0,
+        "source_budget": 2000
+      }
+    ],
+    "source_fingerprint": "da6d02ce267eb32b0f5daa30adbb1ffaf2e6a867d1b1161ef0cbf3becef26026",
+    "selector_hash": "62ebdc62c524f4dd1d75e781beb8ecc1ab68f9e7910b5ec3d394eaf690f7c316",
+    "prior_choices_hash": "56f9baeafbdee76a23c39ee4bfd8ea13a0529413eca8d5f671296b8748c21d80",
+    "script_hash": "1a0c822db4d4279c759efd59faac96af38b4754c79cb4b3807352d28bdeceb9d",
+    "parameter_rule": "transfer prior tuning settings; largest lower/equal budget for new budgets",
+    "holdout_rule": "250 randomly chosen previously unseen official-training speakers; content duplicates excluded",
+    "no_new_tuning": true,
+    "previous_validation_or_test_loaded": false
+  },
+  "train_manifest": {
+    "role": "train",
+    "source_fingerprint": "da6d02ce267eb32b0f5daa30adbb1ffaf2e6a867d1b1161ef0cbf3becef26026",
+    "runtime_versions": {
+      "numpy": "1.26.4",
+      "scipy": "1.17.1",
+      "librosa": "0.11.0",
+      "soundfile": "0.14.0",
+      "torch": "2.6.0+cu126",
+      "torchaudio": "2.6.0+cu126",
+      "transformers": "4.57.6"
+    },
+    "encoder": {
+      "name": "wav2vec2",
+      "checkpoint": "facebook/wav2vec2-base",
+      "embedding_dim": 768,
+      "pooling": "mean",
+      "l2_normalized": true,
+      "device": "cuda",
+      "revision": "0b5b8e868dd84f03fd87d01f9c4ff0f080fecfe8"
+    },
+    "records": 28755,
+    "speakers": 1758,
+    "elapsed_seconds": 688.1240686000092,
+    "chunk_manifests": [
+      "3cb9cd74dbaa5401e78ca5ae6a815b812f404bf5b333d408209e02f3e534ea3a",
+      "d1dbfc82715842e0999d811ac67727ccf2aae78dfb1e416b5bc29c5256570a78",
+      "a1a00c0b0d9de2ccff3d54b38ea51214e5b46b5a6ebd67cd11166c1208171cfe",
+      "33d732d43847140ae88915f15285f58f99f5457a6ffc5b1825f88fcd24a678da",
+      "38551fce7a5920cd73e8923ad2e0559cabdc5e3ead433ab87dbfee0a32e6560c",
+      "3802fab64484ffe1ba7b4d24211371e41663326714892b9deb9bdc588f17e4d2",
+      "630378f48db7debcd1093d65e0c5d9ffe1cf3284793d278cb0dd4931341b63ef",
+      "f0c5fb62a21e9bca480fdd85e8f31f8a8f4b5194ae1595e36522787b162dcfbf",
+      "4b4d41274708e9a83ed3f9ba077c3c05793b28299f9f917cefbacad4f60045bb",
+      "cdaa27f39491531bda17f7f5e99a0a8c71ac2e7fef24cd2ee7eac8c5379bb554",
+      "7ae47c0579393a9e3b4ba5ec0ea7244104f7638ddf54d2ce888318e6da337152",
+      "d2c12d8227803d763c733987712b9e4dced0ee7b8d1d7b657f01699e7cb0405c",
+      "4c7d8d1a3b96ff8b6f59db2b10d5789916f89c332a53715c073a1eb505300cd1",
+      "2f144651eaf388f4b53f5199c546f24e53ed9fc809f3c61baa0c036c25ce5c11",
+      "e7aed57d31af4a944a055600725f78f7d2252759ed0a2e5c973842e2ffe7cdf8",
+      "2abda1e4f615ca4ffacd2fdd05de30773043afb100a3737fffb3947142286512",
+      "fc4daa5ba0925be7804e11e2eab906f8cd16e607e1693c97b92baf838aa348b1",
+      "ff3ced6a41ce3ffc7d1a250036dc173e44e59c19203dde01008319d3d4eb46c2",
+      "193648474f9e20799ad59899c8563fd2ed67ac8ec23e9f350fe6710ac67a5527",
+      "24e3d425c56e23fcae1c9e6465c96bd2e128140d9a22e064c7b221f9901256c7",
+      "4f15d40cb7d66612c4711113bc3241bc1f85c321b36ebe3a34ba2ae80eaa212f",
+      "4d037c1d654bd148c9a3ac349907f0d3a7b9dfda6d999521d148f06b34f58ba4",
+      "5beb5eb042a77f2159fed3319e73788adb1143c026648a2b27c5e3d859728733",
+      "8357498b70effbb98f67d4c311735aa89a6f46366d0cf94fde268ea61a1bd6f7",
+      "5f5668493389599f51864a8b535817ba5ba473553234183a91c679f450525e3c",
+      "5cb4216c4fa9adcb1378b4ae192d82921e05f701c24a6187c6f5a0d5940e6237",
+      "af9fabf24395a29c7c44af16e539b1a166a4e32325230688d6324ea5cd967a6d",
+      "03448da3b80f1500275dc811ae5c668d994eb7ede5320c291dea0dfe0f5c83d3",
+      "757c5bc55301d60d692dfe541af8886798f6d20161325d6fd48e294b0960e7bb",
+      "bf409a2d77a0dbdd25474386f160ba07c8103138197f79651c068332c2c65540",
+      "f97d20c3b9d8355f60d3591926c42b5b968af7a071e6021cc7ce1469350f2bbe",
+      "cfaa9d1ec4039c7a2e5a920576dad9a4d628c9e92b656ff30d051d3cd85e635a",
+      "fde291c969b3c15e8170100f8b543a2d860b04246b61b2b7ff02e20487886957",
+      "e9a881f4716c21c581d6ba6d9a0fd20a9e39acfadeb06b9fdd652907ad547f5f",
+      "6f7e9871912b156539e5bbadcaac8af54bf5863609eac7cec88429ffdcca8c58",
+      "ee86f555f54be206eb66ca673ecf005e20c08a6cf5c27913599af229da04aaf6",
+      "eac31ff0cc0aba3e80ebe2a3115c339b309757d0e21772a7c5a66b2a1dfdfd84",
+      "a718b200f64e20d69d6c0ff4ad8043193e0d362a0afa770ed5ac2f8eb1524d17",
+      "9b884da2cca3a19e5548666856931d7ab3b366ea03da95e603e2c57bc177c98e",
+      "df014a50757a8de6692a805c3c25292e9e89d1c28a92b8cc769ac0867550571b",
+      "0a35c6c703a900a649c37152b49b251e228500c85c002db6e7649e891e778441",
+      "de9b138e321adc210c536519b833fed161c94657fa1567cd0cf7353da2b1528e",
+      "5efef1622b892a0165eca82b5bd8f8cc63cbd52ad081acb1d230ac82e4ded00b",
+      "70ae072e91d9d55ecade01095262be7a0229424580a3e3361bb7fe0821955dc8",
+      "25a16dab3f424e4d91aec46ee74fe8604035a9b77682d07236bdc0206050e4a0",
+      "67fe257c5120c0680f1c7912d02020269185df98982e9bcec4f2e8d5e1952b12",
+      "b5709e0d05cc8ccf2cb66f86cfe614271c9be404fd557fcd7c27f2ff65fa6277",
+      "5daee9a74cea59e3cf362fc61415e7d3b78046df62348e76d52e4375f3fe1735",
+      "fbd1a1cea95ea4bb977e1889b08f5be1f19d016cc803f3deb03c6dfec64a8647",
+      "a935ce02bf153530a6e421e8b533c0a87ac4d09534e58b8a0007d4b899e88638",
+      "35802dd095ae43d07258d7896b0c5e971f6e2f3ec188cbeea1d73b58f08bb9ff",
+      "58c347639eaaeebca60cf370e56fd74546959e55b1a5e00f200620f652521530",
+      "e91e40885a927ea9203401f0bc6bac2e6a119bd297cdc32b7bccd620f66ef3d8",
+      "71aa6c52481bea65ea804513bd23bd352413450ddcfe4d0390bbede26efb2973",
+      "251a87aacae8310f72a75aff940f82f968f9b0671ab55196b18faf75ff0521c7",
+      "ceaee7590ea2bca8c290954da90d98560f8e9143af7cdf0c2893b10d6823aed7",
+      "0bd77a49930c83318d3a34000837d1a3a3a94dde7ece3684f47cbd521de8b1e5",
+      "c9788ca0a510ece9f7c9a5540ec430af846cc6ab659ba95a3baa0c369639ee5c"
+    ],
+    "script_hash": "eb821830b67e73dd0ea7d22909eff28fafd2b48600cc369d034e52cf9cfcc7ab",
+    "signature": "76c6a03f74678ddb",
+    "artifacts": {
+      "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\data\\scaling_v4\\metadata\\train.parquet": "a389cba873b19b69438365d1906270c34d051388b74dcafd0bf82724c377988d",
+      "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\data\\scaling_v4\\embeddings\\train.npy": "6aac2d59f83df9d2e9a7b9fa613e7522a0a84315ecd484e9a1a0bab9402265af",
+      "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\data\\scaling_v4\\embeddings\\train_index.parquet": "e9775a9d3fe69ae38147fb6422224f019e83334ff9d3859e977f7f6d9963e107",
+      "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\data\\scaling_v4\\metadata\\quality_norm_stats.json": "fbb23f9070306a95b0bccd8ce45586827b7773140c2c62bb3c001c1ce2d19f10",
+      "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\data\\scaling_v4\\partition.json": "8a9db369ae372856aec933f11d9ba551934da3502c55814384ad4b9f3e530e9e"
+    }
+  },
+  "holdout_manifest": {
+    "role": "holdout",
+    "source_fingerprint": "da6d02ce267eb32b0f5daa30adbb1ffaf2e6a867d1b1161ef0cbf3becef26026",
+    "runtime_versions": {
+      "numpy": "1.26.4",
+      "scipy": "1.17.1",
+      "librosa": "0.11.0",
+      "soundfile": "0.14.0",
+      "torch": "2.6.0+cu126",
+      "torchaudio": "2.6.0+cu126",
+      "transformers": "4.57.6"
+    },
+    "encoder": {
+      "name": "wav2vec2",
+      "checkpoint": "facebook/wav2vec2-base",
+      "embedding_dim": 768,
+      "pooling": "mean",
+      "l2_normalized": true,
+      "device": "cuda",
+      "revision": "0b5b8e868dd84f03fd87d01f9c4ff0f080fecfe8"
+    },
+    "records": 2014,
+    "speakers": 250,
+    "elapsed_seconds": 64.21370780002326,
+    "chunk_manifests": [
+      "3f8f9963a627f6e580942c06d67670ce979e0a262526696ec6f25ef69c100470",
+      "5757eadf620bd4349e33c616e69701464a1b46db0b380dad827f1b1ec82d9566",
+      "58db374271f1ee1d698cdf1d14fad4f73c2ff50844ef4a252d8515550c10a1b0",
+      "d1a878cfb527ba3a9bd887e0c8a121a6e19b73eae44ca73f82f609b8bb0de6e0",
+      "fa67b78f1a79a0bea867514234baccf907aeb064796fb9576537d35f7df61f1b"
+    ],
+    "script_hash": "eb821830b67e73dd0ea7d22909eff28fafd2b48600cc369d034e52cf9cfcc7ab",
+    "signature": "b4286d254093b006",
+    "artifacts": {
+      "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\data\\scaling_v4\\metadata\\holdout.parquet": "337a503be8bc5b08e51ba8e80577c82a8c3a67089b146f07c8cd0dc89ae783a8",
+      "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\data\\scaling_v4\\embeddings\\holdout.npy": "0c054bc31c49f4955d8f2bbe6691fcc3e1c3c88a51e6b984740e9aa6e1578992",
+      "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\data\\scaling_v4\\embeddings\\holdout_index.parquet": "fd582f7a6135c3dd2c673bc089acb4639d9a7d78ec3b49c2a822979defb1145d",
+      "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\data\\scaling_v4\\metadata\\quality_norm_stats.json": "fbb23f9070306a95b0bccd8ce45586827b7773140c2c62bb3c001c1ce2d19f10",
+      "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\data\\scaling_v4\\partition.json": "8a9db369ae372856aec933f11d9ba551934da3502c55814384ad4b9f3e530e9e"
+    }
+  },
+  "runtime_versions": {
+    "numpy": "1.26.4",
+    "scipy": "1.17.1",
+    "librosa": "0.11.0",
+    "soundfile": "0.14.0",
+    "torch": "2.6.0+cu126",
+    "torchaudio": "2.6.0+cu126",
+    "transformers": "4.57.6"
+  },
+  "threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 2,
+      "prefix": "libopenblas",
+      "filepath": "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\.venv\\Lib\\site-packages\\numpy.libs\\libopenblas64__v0.3.23-293-gc2f4bdbb-gcc_10_3_0-2bde3a66a51006b2b53eb373ff767a3f.dll",
+      "version": "0.3.23.dev",
+      "threading_layer": "pthreads",
+      "architecture": "Zen"
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 2,
+      "prefix": "vcomp",
+      "filepath": "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\.venv\\Lib\\site-packages\\sklearn\\.libs\\vcomp140.dll",
+      "version": null
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 2,
+      "prefix": "libscipy_openblas",
+      "filepath": "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\.venv\\Lib\\site-packages\\scipy.libs\\libscipy_openblas-64eda39e79589aedb16f58e5547eb599.dll",
+      "version": "0.3.30",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 2,
+      "prefix": "libiomp",
+      "filepath": "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\.venv\\Lib\\site-packages\\torch\\lib\\libiomp5md.dll",
+      "version": null
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "prefix": "libiomp",
+      "filepath": "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\.venv\\Lib\\site-packages\\torch\\lib\\libiompstubs5md.dll",
+      "version": null
+    }
+  ],
+  "elapsed_seconds_this_invocation": 74.673988799972,
+  "all_candidate_count": 28755,
+  "holdout_count": 2014,
+  "held_out_speakers": 250,
+  "previous_validation_or_test_loaded": false,
+  "parameter_search_performed": false
+}

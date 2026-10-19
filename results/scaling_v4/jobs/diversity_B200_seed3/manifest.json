@@ -1,0 +1,18 @@
+{
+  "strategy": "diversity",
+  "budget": 200,
+  "setting": "default",
+  "C": 1.0,
+  "source_budget": 200,
+  "seed": 3,
+  "identity": "9c82fcff05f08c6b",
+  "selection_seconds": 0.45052049995865673,
+  "fit_seconds": 0.1409661999787204,
+  "distinct_speakers": 155,
+  "mean_quality": 0.36594920725077457,
+  "selection_path": "results\\scaling_v4\\jobs\\diversity_B200_seed3\\selection.json",
+  "artifacts": {
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\scaling_v4\\jobs\\diversity_B200_seed3\\selection.json": "ffffc18c30141f52e40d0306226798633c9cda6fbc8e6827b3a9ffaf2dda1230",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\scaling_v4\\jobs\\diversity_B200_seed3\\model.joblib": "e6cff3fb94428ee3c27ce0ca8d914dd9e75ed8a0e3d5e51da3f19afc6f8a6a92"
+  }
+}

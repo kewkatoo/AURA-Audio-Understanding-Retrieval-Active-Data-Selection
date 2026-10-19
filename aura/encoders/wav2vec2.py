@@ -52,6 +52,8 @@ class Wav2Vec2Encoder(AudioEncoder):
         self.pooling = pooling
         self.normalize = normalize
         self.batch_size = batch_size
+        if isinstance(batch_size, bool) or not isinstance(batch_size, int) or batch_size < 1:
+            raise ValueError("batch_size must be a positive integer")
         self.device = _resolve_device(device)
 
         self.feature_extractor = Wav2Vec2FeatureExtractor.from_pretrained(checkpoint)
@@ -70,6 +72,7 @@ class Wav2Vec2Encoder(AudioEncoder):
             pooling=pooling,
             l2_normalized=normalize,
             device=self.device,
+            revision=getattr(self.model.config, "_commit_hash", None),
         )
 
     @property
@@ -90,14 +93,27 @@ class Wav2Vec2Encoder(AudioEncoder):
                 "Resample before calling encode_batch (aura.ingest.audio handles this)."
             )
 
-        all_embeddings = []
-        for start in range(0, len(waveforms), self.batch_size):
-            chunk = waveforms[start:start + self.batch_size]
+        # Padding changes convolutional group normalization even if the
+        # final pooling is masked. Batch equal-length clips without padding,
+        # then restore input order. This keeps per-sample caching valid.
+        buckets: dict[int, list[int]] = {}
+        for i, waveform in enumerate(waveforms):
+            if waveform.ndim != 1 or not np.isfinite(waveform).all():
+                raise ValueError("Expected finite mono waveforms")
+            if len(waveform) == 0 or self.model._get_feat_extract_output_lengths(len(waveform)) < 1:
+                raise ValueError("Waveform is too short for the encoder convolution stack")
+            buckets.setdefault(len(waveform), []).append(i)
+        all_embeddings = np.empty((len(waveforms), self.info.embedding_dim), dtype=np.float32)
+        batches = [indices[start:start + self.batch_size]
+                   for indices in buckets.values()
+                   for start in range(0, len(indices), self.batch_size)]
+        for indices in batches:
+            chunk = [waveforms[i] for i in indices]
             inputs = self.feature_extractor(
                 [w.astype(np.float32) for w in chunk],
                 sampling_rate=expected_sr,
                 return_tensors="pt",
-                padding=True,
+                padding=False,
             )
             input_values = inputs["input_values"].to(self.device)
             attention_mask = inputs.get("attention_mask")
@@ -130,6 +146,6 @@ class Wav2Vec2Encoder(AudioEncoder):
             if self.normalize:
                 pooled = torch.nn.functional.normalize(pooled, p=2, dim=-1)
 
-            all_embeddings.append(pooled.cpu().numpy().astype(np.float32))
+            all_embeddings[indices] = pooled.cpu().numpy().astype(np.float32)
 
-        return np.concatenate(all_embeddings, axis=0)
+        return all_embeddings

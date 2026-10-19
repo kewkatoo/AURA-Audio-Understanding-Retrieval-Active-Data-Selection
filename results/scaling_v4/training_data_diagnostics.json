@@ -1,0 +1,9 @@
+{
+  "duplicate_content_groups": 507,
+  "recordings_in_duplicate_groups": 1209,
+  "duplicate_groups_with_conflicting_class_labels": 0,
+  "max_identical_file_count": 10,
+  "mean_quality_duplicate_groups": 0.4862481888959506,
+  "mean_quality_other_recordings": 0.45753978892754066,
+  "zero_quality_training_recordings": 245
+}

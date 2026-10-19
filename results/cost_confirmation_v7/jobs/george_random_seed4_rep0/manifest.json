@@ -1,0 +1,21 @@
+{
+  "identity": "580cd0e0d834ff29",
+  "job": {
+    "speaker": "george",
+    "method": "random",
+    "seed": 4,
+    "repeat": 0,
+    "budget": 920,
+    "timed_pair": false,
+    "primary": true,
+    "C": 1.0
+  },
+  "end_to_end_seconds": 7.579046199971344,
+  "head_seconds": 0.30801149999024346,
+  "session": "2026-10-18T15:03:40.110065+00:00",
+  "artifacts": {
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\cost_confirmation_v7\\jobs\\george_random_seed4_rep0\\selection.json": "3dec80de96662acbda660c5a12436ccdc961360747ec5ce952ff44c6638a843e",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\cost_confirmation_v7\\jobs\\george_random_seed4_rep0\\embeddings.npy": "2001a51ab7cd104623366bdb762746951f0187a6be8da475729e901cfbcd027d",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\cost_confirmation_v7\\jobs\\george_random_seed4_rep0\\model.joblib": "899dd50b3ff36f57f36853c707e9e63ef1d77a4d4d45f77d1dbd0fe0b427fd42"
+  }
+}

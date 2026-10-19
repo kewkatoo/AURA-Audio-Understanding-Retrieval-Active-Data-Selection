@@ -1,0 +1,650 @@
+[
+  {
+    "strategy": "random",
+    "budget": 100,
+    "seed": 0,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\random_budget100_seed0_alpha-1.json"
+  },
+  {
+    "strategy": "random",
+    "budget": 100,
+    "seed": 1,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\random_budget100_seed1_alpha-1.json"
+  },
+  {
+    "strategy": "random",
+    "budget": 100,
+    "seed": 2,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\random_budget100_seed2_alpha-1.json"
+  },
+  {
+    "strategy": "random",
+    "budget": 100,
+    "seed": 3,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\random_budget100_seed3_alpha-1.json"
+  },
+  {
+    "strategy": "random",
+    "budget": 100,
+    "seed": 4,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\random_budget100_seed4_alpha-1.json"
+  },
+  {
+    "strategy": "quality",
+    "budget": 100,
+    "seed": 0,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\quality_budget100_seed0_alpha-1.json"
+  },
+  {
+    "strategy": "quality",
+    "budget": 100,
+    "seed": 1,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\quality_budget100_seed1_alpha-1.json"
+  },
+  {
+    "strategy": "quality",
+    "budget": 100,
+    "seed": 2,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\quality_budget100_seed2_alpha-1.json"
+  },
+  {
+    "strategy": "quality",
+    "budget": 100,
+    "seed": 3,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\quality_budget100_seed3_alpha-1.json"
+  },
+  {
+    "strategy": "quality",
+    "budget": 100,
+    "seed": 4,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\quality_budget100_seed4_alpha-1.json"
+  },
+  {
+    "strategy": "diversity",
+    "budget": 100,
+    "seed": 0,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\diversity_budget100_seed0_alpha-1.json"
+  },
+  {
+    "strategy": "diversity",
+    "budget": 100,
+    "seed": 1,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\diversity_budget100_seed1_alpha-1.json"
+  },
+  {
+    "strategy": "diversity",
+    "budget": 100,
+    "seed": 2,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\diversity_budget100_seed2_alpha-1.json"
+  },
+  {
+    "strategy": "diversity",
+    "budget": 100,
+    "seed": 3,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\diversity_budget100_seed3_alpha-1.json"
+  },
+  {
+    "strategy": "diversity",
+    "budget": 100,
+    "seed": 4,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\diversity_budget100_seed4_alpha-1.json"
+  },
+  {
+    "strategy": "combined",
+    "budget": 100,
+    "seed": 0,
+    "alpha": 1,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\combined_budget100_seed0_alpha1.json"
+  },
+  {
+    "strategy": "combined",
+    "budget": 100,
+    "seed": 1,
+    "alpha": 1,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\combined_budget100_seed1_alpha1.json"
+  },
+  {
+    "strategy": "combined",
+    "budget": 100,
+    "seed": 2,
+    "alpha": 1,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\combined_budget100_seed2_alpha1.json"
+  },
+  {
+    "strategy": "combined",
+    "budget": 100,
+    "seed": 3,
+    "alpha": 1,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\combined_budget100_seed3_alpha1.json"
+  },
+  {
+    "strategy": "combined",
+    "budget": 100,
+    "seed": 4,
+    "alpha": 1,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\combined_budget100_seed4_alpha1.json"
+  },
+  {
+    "strategy": "random",
+    "budget": 200,
+    "seed": 0,
+    "alpha": -1.0,
+    "C": 0.1,
+    "selection_path": "results\\benchmark_v2\\selections\\random_budget200_seed0_alpha-1.json"
+  },
+  {
+    "strategy": "random",
+    "budget": 200,
+    "seed": 1,
+    "alpha": -1.0,
+    "C": 0.1,
+    "selection_path": "results\\benchmark_v2\\selections\\random_budget200_seed1_alpha-1.json"
+  },
+  {
+    "strategy": "random",
+    "budget": 200,
+    "seed": 2,
+    "alpha": -1.0,
+    "C": 0.1,
+    "selection_path": "results\\benchmark_v2\\selections\\random_budget200_seed2_alpha-1.json"
+  },
+  {
+    "strategy": "random",
+    "budget": 200,
+    "seed": 3,
+    "alpha": -1.0,
+    "C": 0.1,
+    "selection_path": "results\\benchmark_v2\\selections\\random_budget200_seed3_alpha-1.json"
+  },
+  {
+    "strategy": "random",
+    "budget": 200,
+    "seed": 4,
+    "alpha": -1.0,
+    "C": 0.1,
+    "selection_path": "results\\benchmark_v2\\selections\\random_budget200_seed4_alpha-1.json"
+  },
+  {
+    "strategy": "quality",
+    "budget": 200,
+    "seed": 0,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\quality_budget200_seed0_alpha-1.json"
+  },
+  {
+    "strategy": "quality",
+    "budget": 200,
+    "seed": 1,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\quality_budget200_seed1_alpha-1.json"
+  },
+  {
+    "strategy": "quality",
+    "budget": 200,
+    "seed": 2,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\quality_budget200_seed2_alpha-1.json"
+  },
+  {
+    "strategy": "quality",
+    "budget": 200,
+    "seed": 3,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\quality_budget200_seed3_alpha-1.json"
+  },
+  {
+    "strategy": "quality",
+    "budget": 200,
+    "seed": 4,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\quality_budget200_seed4_alpha-1.json"
+  },
+  {
+    "strategy": "diversity",
+    "budget": 200,
+    "seed": 0,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\diversity_budget200_seed0_alpha-1.json"
+  },
+  {
+    "strategy": "diversity",
+    "budget": 200,
+    "seed": 1,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\diversity_budget200_seed1_alpha-1.json"
+  },
+  {
+    "strategy": "diversity",
+    "budget": 200,
+    "seed": 2,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\diversity_budget200_seed2_alpha-1.json"
+  },
+  {
+    "strategy": "diversity",
+    "budget": 200,
+    "seed": 3,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\diversity_budget200_seed3_alpha-1.json"
+  },
+  {
+    "strategy": "diversity",
+    "budget": 200,
+    "seed": 4,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\diversity_budget200_seed4_alpha-1.json"
+  },
+  {
+    "strategy": "combined",
+    "budget": 200,
+    "seed": 0,
+    "alpha": 1,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\combined_budget200_seed0_alpha1.json"
+  },
+  {
+    "strategy": "combined",
+    "budget": 200,
+    "seed": 1,
+    "alpha": 1,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\combined_budget200_seed1_alpha1.json"
+  },
+  {
+    "strategy": "combined",
+    "budget": 200,
+    "seed": 2,
+    "alpha": 1,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\combined_budget200_seed2_alpha1.json"
+  },
+  {
+    "strategy": "combined",
+    "budget": 200,
+    "seed": 3,
+    "alpha": 1,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\combined_budget200_seed3_alpha1.json"
+  },
+  {
+    "strategy": "combined",
+    "budget": 200,
+    "seed": 4,
+    "alpha": 1,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\combined_budget200_seed4_alpha1.json"
+  },
+  {
+    "strategy": "random",
+    "budget": 400,
+    "seed": 0,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\random_budget400_seed0_alpha-1.json"
+  },
+  {
+    "strategy": "random",
+    "budget": 400,
+    "seed": 1,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\random_budget400_seed1_alpha-1.json"
+  },
+  {
+    "strategy": "random",
+    "budget": 400,
+    "seed": 2,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\random_budget400_seed2_alpha-1.json"
+  },
+  {
+    "strategy": "random",
+    "budget": 400,
+    "seed": 3,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\random_budget400_seed3_alpha-1.json"
+  },
+  {
+    "strategy": "random",
+    "budget": 400,
+    "seed": 4,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\random_budget400_seed4_alpha-1.json"
+  },
+  {
+    "strategy": "quality",
+    "budget": 400,
+    "seed": 0,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\quality_budget400_seed0_alpha-1.json"
+  },
+  {
+    "strategy": "quality",
+    "budget": 400,
+    "seed": 1,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\quality_budget400_seed1_alpha-1.json"
+  },
+  {
+    "strategy": "quality",
+    "budget": 400,
+    "seed": 2,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\quality_budget400_seed2_alpha-1.json"
+  },
+  {
+    "strategy": "quality",
+    "budget": 400,
+    "seed": 3,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\quality_budget400_seed3_alpha-1.json"
+  },
+  {
+    "strategy": "quality",
+    "budget": 400,
+    "seed": 4,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\quality_budget400_seed4_alpha-1.json"
+  },
+  {
+    "strategy": "diversity",
+    "budget": 400,
+    "seed": 0,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\diversity_budget400_seed0_alpha-1.json"
+  },
+  {
+    "strategy": "diversity",
+    "budget": 400,
+    "seed": 1,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\diversity_budget400_seed1_alpha-1.json"
+  },
+  {
+    "strategy": "diversity",
+    "budget": 400,
+    "seed": 2,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\diversity_budget400_seed2_alpha-1.json"
+  },
+  {
+    "strategy": "diversity",
+    "budget": 400,
+    "seed": 3,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\diversity_budget400_seed3_alpha-1.json"
+  },
+  {
+    "strategy": "diversity",
+    "budget": 400,
+    "seed": 4,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\diversity_budget400_seed4_alpha-1.json"
+  },
+  {
+    "strategy": "combined",
+    "budget": 400,
+    "seed": 0,
+    "alpha": 0.25,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\combined_budget400_seed0_alpha0.25.json"
+  },
+  {
+    "strategy": "combined",
+    "budget": 400,
+    "seed": 1,
+    "alpha": 0.25,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\combined_budget400_seed1_alpha0.25.json"
+  },
+  {
+    "strategy": "combined",
+    "budget": 400,
+    "seed": 2,
+    "alpha": 0.25,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\combined_budget400_seed2_alpha0.25.json"
+  },
+  {
+    "strategy": "combined",
+    "budget": 400,
+    "seed": 3,
+    "alpha": 0.25,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\combined_budget400_seed3_alpha0.25.json"
+  },
+  {
+    "strategy": "combined",
+    "budget": 400,
+    "seed": 4,
+    "alpha": 0.25,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\combined_budget400_seed4_alpha0.25.json"
+  },
+  {
+    "strategy": "random",
+    "budget": 800,
+    "seed": 0,
+    "alpha": -1.0,
+    "C": 0.1,
+    "selection_path": "results\\benchmark_v2\\selections\\random_budget800_seed0_alpha-1.json"
+  },
+  {
+    "strategy": "random",
+    "budget": 800,
+    "seed": 1,
+    "alpha": -1.0,
+    "C": 0.1,
+    "selection_path": "results\\benchmark_v2\\selections\\random_budget800_seed1_alpha-1.json"
+  },
+  {
+    "strategy": "random",
+    "budget": 800,
+    "seed": 2,
+    "alpha": -1.0,
+    "C": 0.1,
+    "selection_path": "results\\benchmark_v2\\selections\\random_budget800_seed2_alpha-1.json"
+  },
+  {
+    "strategy": "random",
+    "budget": 800,
+    "seed": 3,
+    "alpha": -1.0,
+    "C": 0.1,
+    "selection_path": "results\\benchmark_v2\\selections\\random_budget800_seed3_alpha-1.json"
+  },
+  {
+    "strategy": "random",
+    "budget": 800,
+    "seed": 4,
+    "alpha": -1.0,
+    "C": 0.1,
+    "selection_path": "results\\benchmark_v2\\selections\\random_budget800_seed4_alpha-1.json"
+  },
+  {
+    "strategy": "quality",
+    "budget": 800,
+    "seed": 0,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\quality_budget800_seed0_alpha-1.json"
+  },
+  {
+    "strategy": "quality",
+    "budget": 800,
+    "seed": 1,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\quality_budget800_seed1_alpha-1.json"
+  },
+  {
+    "strategy": "quality",
+    "budget": 800,
+    "seed": 2,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\quality_budget800_seed2_alpha-1.json"
+  },
+  {
+    "strategy": "quality",
+    "budget": 800,
+    "seed": 3,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\quality_budget800_seed3_alpha-1.json"
+  },
+  {
+    "strategy": "quality",
+    "budget": 800,
+    "seed": 4,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\quality_budget800_seed4_alpha-1.json"
+  },
+  {
+    "strategy": "diversity",
+    "budget": 800,
+    "seed": 0,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\diversity_budget800_seed0_alpha-1.json"
+  },
+  {
+    "strategy": "diversity",
+    "budget": 800,
+    "seed": 1,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\diversity_budget800_seed1_alpha-1.json"
+  },
+  {
+    "strategy": "diversity",
+    "budget": 800,
+    "seed": 2,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\diversity_budget800_seed2_alpha-1.json"
+  },
+  {
+    "strategy": "diversity",
+    "budget": 800,
+    "seed": 3,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\diversity_budget800_seed3_alpha-1.json"
+  },
+  {
+    "strategy": "diversity",
+    "budget": 800,
+    "seed": 4,
+    "alpha": -1.0,
+    "C": 1,
+    "selection_path": "results\\benchmark_v2\\selections\\diversity_budget800_seed4_alpha-1.json"
+  },
+  {
+    "strategy": "combined",
+    "budget": 800,
+    "seed": 0,
+    "alpha": 0.25,
+    "C": 0.1,
+    "selection_path": "results\\benchmark_v2\\selections\\combined_budget800_seed0_alpha0.25.json"
+  },
+  {
+    "strategy": "combined",
+    "budget": 800,
+    "seed": 1,
+    "alpha": 0.25,
+    "C": 0.1,
+    "selection_path": "results\\benchmark_v2\\selections\\combined_budget800_seed1_alpha0.25.json"
+  },
+  {
+    "strategy": "combined",
+    "budget": 800,
+    "seed": 2,
+    "alpha": 0.25,
+    "C": 0.1,
+    "selection_path": "results\\benchmark_v2\\selections\\combined_budget800_seed2_alpha0.25.json"
+  },
+  {
+    "strategy": "combined",
+    "budget": 800,
+    "seed": 3,
+    "alpha": 0.25,
+    "C": 0.1,
+    "selection_path": "results\\benchmark_v2\\selections\\combined_budget800_seed3_alpha0.25.json"
+  },
+  {
+    "strategy": "combined",
+    "budget": 800,
+    "seed": 4,
+    "alpha": 0.25,
+    "C": 0.1,
+    "selection_path": "results\\benchmark_v2\\selections\\combined_budget800_seed4_alpha0.25.json"
+  },
+  {
+    "strategy": "full_pool",
+    "budget": 2000,
+    "seed": 0,
+    "alpha": -1.0,
+    "C": 10,
+    "selection_path": "results\\benchmark_v2\\selections\\full_pool_budget2000_seed0_alpha-1.json"
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-19",
+  "scope": "Read-only v5/v6 relocation verification supplement; excludes copied evidence and Python caches.",
+  "baseline_snapshot_hash": "646d5bd6141dfeaccd19a134482e8182863f550cb4ecd3b6e939abb9cc0887f8",
+  "files": {
+    "EARLIER_STUDY_PORTABILITY.md": "fda7b0bde2d31d7770b2a17b57e4a8a1333bb5cd9a7d530e0f835a8a5158a14b",
+    "handoff/portable_earlier_studies/audiomnist.log": "de80d31652c65657c706bfacb9d2f4366bcea051be53230dca4c34b0744c2bc8",
+    "handoff/portable_earlier_studies/cost.log": "e04912acd82532155dec186d79e0cd7046d58e935c138a58265a743a6c9d18b5",
+    "handoff/portable_earlier_studies/duplicate-control.log": "dc0ebf3e7983d0b50ee73c8f396e1714bad54ca84aac04899e0c214a206393d8",
+    "handoff/portable_earlier_studies/missing_prepared_array.log": "5029f4912eaeb06e0b30416f839f5fa705ae5aae81cb2bf558166889cdf201fc",
+    "handoff/portable_earlier_studies/README.md": "b628c8ea93c92b2d970074fc7c70f52192c8d132f5256328c4c6c893b872bfc4",
+    "handoff/portable_earlier_studies/test_reports.py": "13674bcaf5bade852e277c4321d36fb94c2e8d3c2ce16c580c41df9bd1516892",
+    "handoff/portable_earlier_studies/validation.json": "9213a2f77132d9dc151bcd8d00bbaf7657b864150af505fbdd64f8468b7942b0",
+    "handoff/portable_earlier_studies/verify.py": "856a622712a6e6468119029215d62623b19c6680f620b8d29613626f3dd93ca4"
+  }
+}

@@ -1,0 +1,687 @@
+{
+  "dataset_url": "https://github.com/Jakobovski/free-spoken-digit-dataset",
+  "dataset_revision": "26eb9aaf76e81b692f806f9140c2d2777410d7a1",
+  "dataset_license": "CC BY-SA 4.0",
+  "dataset_readme_hash": "f2610871fd631afb6f82cde2cc091371ec09c36deae5171abc6e351a925efaa9",
+  "inventory_hash": "9c70c866e1e0f0c5d3520731fd721dc8c10a6f5055c68497cf1c466d697453fc",
+  "folds_hash": "2bf20e1d05f262c1264e346cd6971d029dea82d4173108c9f172dc80c2763c9e",
+  "source_fingerprint": "da6d02ce267eb32b0f5daa30adbb1ffaf2e6a867d1b1161ef0cbf3becef26026",
+  "sources": {
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\scripts\\study_cost_confirmation.py": "5aae612963cf7d3c52f0da85d516f2830af53754b40a0a0d545fd101cb633814",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\experiments\\raw_pipeline.py": "3fde4d0e4879a0eb1dc4cd97997a12bb726c2db34d0ad7290630282a92dfb1c7",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\experiments\\cost_confirmation.py": "e91061eb97fc56609ef07b89d45fe01f81debaa2819df1046e6a151b1df88e03",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\scripts\\evaluate_selection.py": "982f5855696caefb03ce13c8431d1bcb2a2080a5a0db06d31d63ec20395771ad"
+  },
+  "config": {
+    "dataset": {
+      "name": "FSDD_LOSO",
+      "classes": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "root": "data/raw/FSDD",
+      "sample_limit": {
+        "train": null,
+        "validation": null,
+        "test": null
+      }
+    },
+    "audio": {
+      "sample_rate": 16000,
+      "mono": true,
+      "normalize": true,
+      "vad": true,
+      "vad_frame_ms": 25.0,
+      "vad_hop_ms": 10.0,
+      "vad_energy_percentile": 20.0,
+      "vad_noise_margin_db": 6.0,
+      "vad_min_rms": 0.001
+    },
+    "encoder": {
+      "name": "wav2vec2",
+      "checkpoint": "facebook/wav2vec2-base",
+      "pooling": "mean",
+      "normalize": true,
+      "device": "auto",
+      "batch_size": 16
+    },
+    "cache": {
+      "path": "./data/v2/cache"
+    },
+    "paths": {
+      "metadata_dir": "./data/v2/metadata",
+      "embeddings_dir": "./data/v2/embeddings"
+    }
+  },
+  "jobs": [
+    {
+      "speaker": "george",
+      "method": "full_pool",
+      "seed": 0,
+      "repeat": 0,
+      "budget": 2500,
+      "timed_pair": true,
+      "primary": true,
+      "C": 1.0
+    },
+    {
+      "speaker": "george",
+      "method": "random",
+      "seed": 0,
+      "repeat": 0,
+      "budget": 920,
+      "timed_pair": true,
+      "primary": true,
+      "C": 1.0
+    },
+    {
+      "speaker": "george",
+      "method": "random",
+      "seed": 0,
+      "repeat": 1,
+      "budget": 920,
+      "timed_pair": true,
+      "primary": false,
+      "C": 1.0
+    },
+    {
+      "speaker": "george",
+      "method": "full_pool",
+      "seed": 0,
+      "repeat": 1,
+      "budget": 2500,
+      "timed_pair": true,
+      "primary": false,
+      "C": 1.0
+    },
+    {
+      "speaker": "george",
+      "method": "full_pool",
+      "seed": 0,
+      "repeat": 2,
+      "budget": 2500,
+      "timed_pair": true,
+      "primary": false,
+      "C": 1.0
+    },
+    {
+      "speaker": "george",
+      "method": "random",
+      "seed": 0,
+      "repeat": 2,
+      "budget": 920,
+      "timed_pair": true,
+      "primary": false,
+      "C": 1.0
+    },
+    {
+      "speaker": "jackson",
+      "method": "random",
+      "seed": 0,
+      "repeat": 0,
+      "budget": 920,
+      "timed_pair": true,
+      "primary": true,
+      "C": 1.0
+    },
+    {
+      "speaker": "jackson",
+      "method": "full_pool",
+      "seed": 0,
+      "repeat": 0,
+      "budget": 2500,
+      "timed_pair": true,
+      "primary": true,
+      "C": 1.0
+    },
+    {
+      "speaker": "jackson",
+      "method": "full_pool",
+      "seed": 0,
+      "repeat": 1,
+      "budget": 2500,
+      "timed_pair": true,
+      "primary": false,
+      "C": 1.0
+    },
+    {
+      "speaker": "jackson",
+      "method": "random",
+      "seed": 0,
+      "repeat": 1,
+      "budget": 920,
+      "timed_pair": true,
+      "primary": false,
+      "C": 1.0
+    },
+    {
+      "speaker": "jackson",
+      "method": "random",
+      "seed": 0,
+      "repeat": 2,
+      "budget": 920,
+      "timed_pair": true,
+      "primary": false,
+      "C": 1.0
+    },
+    {
+      "speaker": "jackson",
+      "method": "full_pool",
+      "seed": 0,
+      "repeat": 2,
+      "budget": 2500,
+      "timed_pair": true,
+      "primary": false,
+      "C": 1.0
+    },
+    {
+      "speaker": "lucas",
+      "method": "full_pool",
+      "seed": 0,
+      "repeat": 0,
+      "budget": 2500,
+      "timed_pair": true,
+      "primary": true,
+      "C": 1.0
+    },
+    {
+      "speaker": "lucas",
+      "method": "random",
+      "seed": 0,
+      "repeat": 0,
+      "budget": 920,
+      "timed_pair": true,
+      "primary": true,
+      "C": 1.0
+    },
+    {
+      "speaker": "lucas",
+      "method": "random",
+      "seed": 0,
+      "repeat": 1,
+      "budget": 920,
+      "timed_pair": true,
+      "primary": false,
+      "C": 1.0
+    },
+    {
+      "speaker": "lucas",
+      "method": "full_pool",
+      "seed": 0,
+      "repeat": 1,
+      "budget": 2500,
+      "timed_pair": true,
+      "primary": false,
+      "C": 1.0
+    },
+    {
+      "speaker": "lucas",
+      "method": "full_pool",
+      "seed": 0,
+      "repeat": 2,
+      "budget": 2500,
+      "timed_pair": true,
+      "primary": false,
+      "C": 1.0
+    },
+    {
+      "speaker": "lucas",
+      "method": "random",
+      "seed": 0,
+      "repeat": 2,
+      "budget": 920,
+      "timed_pair": true,
+      "primary": false,
+      "C": 1.0
+    },
+    {
+      "speaker": "nicolas",
+      "method": "random",
+      "seed": 0,
+      "repeat": 0,
+      "budget": 920,
+      "timed_pair": true,
+      "primary": true,
+      "C": 1.0
+    },
+    {
+      "speaker": "nicolas",
+      "method": "full_pool",
+      "seed": 0,
+      "repeat": 0,
+      "budget": 2500,
+      "timed_pair": true,
+      "primary": true,
+      "C": 1.0
+    },
+    {
+      "speaker": "nicolas",
+      "method": "full_pool",
+      "seed": 0,
+      "repeat": 1,
+      "budget": 2500,
+      "timed_pair": true,
+      "primary": false,
+      "C": 1.0
+    },
+    {
+      "speaker": "nicolas",
+      "method": "random",
+      "seed": 0,
+      "repeat": 1,
+      "budget": 920,
+      "timed_pair": true,
+      "primary": false,
+      "C": 1.0
+    },
+    {
+      "speaker": "nicolas",
+      "method": "random",
+      "seed": 0,
+      "repeat": 2,
+      "budget": 920,
+      "timed_pair": true,
+      "primary": false,
+      "C": 1.0
+    },
+    {
+      "speaker": "nicolas",
+      "method": "full_pool",
+      "seed": 0,
+      "repeat": 2,
+      "budget": 2500,
+      "timed_pair": true,
+      "primary": false,
+      "C": 1.0
+    },
+    {
+      "speaker": "theo",
+      "method": "full_pool",
+      "seed": 0,
+      "repeat": 0,
+      "budget": 2500,
+      "timed_pair": true,
+      "primary": true,
+      "C": 1.0
+    },
+    {
+      "speaker": "theo",
+      "method": "random",
+      "seed": 0,
+      "repeat": 0,
+      "budget": 920,
+      "timed_pair": true,
+      "primary": true,
+      "C": 1.0
+    },
+    {
+      "speaker": "theo",
+      "method": "random",
+      "seed": 0,
+      "repeat": 1,
+      "budget": 920,
+      "timed_pair": true,
+      "primary": false,
+      "C": 1.0
+    },
+    {
+      "speaker": "theo",
+      "method": "full_pool",
+      "seed": 0,
+      "repeat": 1,
+      "budget": 2500,
+      "timed_pair": true,
+      "primary": false,
+      "C": 1.0
+    },
+    {
+      "speaker": "theo",
+      "method": "full_pool",
+      "seed": 0,
+      "repeat": 2,
+      "budget": 2500,
+      "timed_pair": true,
+      "primary": false,
+      "C": 1.0
+    },
+    {
+      "speaker": "theo",
+      "method": "random",
+      "seed": 0,
+      "repeat": 2,
+      "budget": 920,
+      "timed_pair": true,
+      "primary": false,
+      "C": 1.0
+    },
+    {
+      "speaker": "yweweler",
+      "method": "random",
+      "seed": 0,
+      "repeat": 0,
+      "budget": 920,
+      "timed_pair": true,
+      "primary": true,
+      "C": 1.0
+    },
+    {
+      "speaker": "yweweler",
+      "method": "full_pool",
+      "seed": 0,
+      "repeat": 0,
+      "budget": 2500,
+      "timed_pair": true,
+      "primary": true,
+      "C": 1.0
+    },
+    {
+      "speaker": "yweweler",
+      "method": "full_pool",
+      "seed": 0,
+      "repeat": 1,
+      "budget": 2500,
+      "timed_pair": true,
+      "primary": false,
+      "C": 1.0
+    },
+    {
+      "speaker": "yweweler",
+      "method": "random",
+      "seed": 0,
+      "repeat": 1,
+      "budget": 920,
+      "timed_pair": true,
+      "primary": false,
+      "C": 1.0
+    },
+    {
+      "speaker": "yweweler",
+      "method": "random",
+      "seed": 0,
+      "repeat": 2,
+      "budget": 920,
+      "timed_pair": true,
+      "primary": false,
+      "C": 1.0
+    },
+    {
+      "speaker": "yweweler",
+      "method": "full_pool",
+      "seed": 0,
+      "repeat": 2,
+      "budget": 2500,
+      "timed_pair": true,
+      "primary": false,
+      "C": 1.0
+    },
+    {
+      "speaker": "george",
+      "method": "random",
+      "seed": 1,
+      "repeat": 0,
+      "budget": 920,
+      "timed_pair": false,
+      "primary": true,
+      "C": 1.0
+    },
+    {
+      "speaker": "george",
+      "method": "random",
+      "seed": 2,
+      "repeat": 0,
+      "budget": 920,
+      "timed_pair": false,
+      "primary": true,
+      "C": 1.0
+    },
+    {
+      "speaker": "george",
+      "method": "random",
+      "seed": 3,
+      "repeat": 0,
+      "budget": 920,
+      "timed_pair": false,
+      "primary": true,
+      "C": 1.0
+    },
+    {
+      "speaker": "george",
+      "method": "random",
+      "seed": 4,
+      "repeat": 0,
+      "budget": 920,
+      "timed_pair": false,
+      "primary": true,
+      "C": 1.0
+    },
+    {
+      "speaker": "jackson",
+      "method": "random",
+      "seed": 1,
+      "repeat": 0,
+      "budget": 920,
+      "timed_pair": false,
+      "primary": true,
+      "C": 1.0
+    },
+    {
+      "speaker": "jackson",
+      "method": "random",
+      "seed": 2,
+      "repeat": 0,
+      "budget": 920,
+      "timed_pair": false,
+      "primary": true,
+      "C": 1.0
+    },
+    {
+      "speaker": "jackson",
+      "method": "random",
+      "seed": 3,
+      "repeat": 0,
+      "budget": 920,
+      "timed_pair": false,
+      "primary": true,
+      "C": 1.0
+    },
+    {
+      "speaker": "jackson",
+      "method": "random",
+      "seed": 4,
+      "repeat": 0,
+      "budget": 920,
+      "timed_pair": false,
+      "primary": true,
+      "C": 1.0
+    },
+    {
+      "speaker": "lucas",
+      "method": "random",
+      "seed": 1,
+      "repeat": 0,
+      "budget": 920,
+      "timed_pair": false,
+      "primary": true,
+      "C": 1.0
+    },
+    {
+      "speaker": "lucas",
+      "method": "random",
+      "seed": 2,
+      "repeat": 0,
+      "budget": 920,
+      "timed_pair": false,
+      "primary": true,
+      "C": 1.0
+    },
+    {
+      "speaker": "lucas",
+      "method": "random",
+      "seed": 3,
+      "repeat": 0,
+      "budget": 920,
+      "timed_pair": false,
+      "primary": true,
+      "C": 1.0
+    },
+    {
+      "speaker": "lucas",
+      "method": "random",
+      "seed": 4,
+      "repeat": 0,
+      "budget": 920,
+      "timed_pair": false,
+      "primary": true,
+      "C": 1.0
+    },
+    {
+      "speaker": "nicolas",
+      "method": "random",
+      "seed": 1,
+      "repeat": 0,
+      "budget": 920,
+      "timed_pair": false,
+      "primary": true,
+      "C": 1.0
+    },
+    {
+      "speaker": "nicolas",
+      "method": "random",
+      "seed": 2,
+      "repeat": 0,
+      "budget": 920,
+      "timed_pair": false,
+      "primary": true,
+      "C": 1.0
+    },
+    {
+      "speaker": "nicolas",
+      "method": "random",
+      "seed": 3,
+      "repeat": 0,
+      "budget": 920,
+      "timed_pair": false,
+      "primary": true,
+      "C": 1.0
+    },
+    {
+      "speaker": "nicolas",
+      "method": "random",
+      "seed": 4,
+      "repeat": 0,
+      "budget": 920,
+      "timed_pair": false,
+      "primary": true,
+      "C": 1.0
+    },
+    {
+      "speaker": "theo",
+      "method": "random",
+      "seed": 1,
+      "repeat": 0,
+      "budget": 920,
+      "timed_pair": false,
+      "primary": true,
+      "C": 1.0
+    },
+    {
+      "speaker": "theo",
+      "method": "random",
+      "seed": 2,
+      "repeat": 0,
+      "budget": 920,
+      "timed_pair": false,
+      "primary": true,
+      "C": 1.0
+    },
+    {
+      "speaker": "theo",
+      "method": "random",
+      "seed": 3,
+      "repeat": 0,
+      "budget": 920,
+      "timed_pair": false,
+      "primary": true,
+      "C": 1.0
+    },
+    {
+      "speaker": "theo",
+      "method": "random",
+      "seed": 4,
+      "repeat": 0,
+      "budget": 920,
+      "timed_pair": false,
+      "primary": true,
+      "C": 1.0
+    },
+    {
+      "speaker": "yweweler",
+      "method": "random",
+      "seed": 1,
+      "repeat": 0,
+      "budget": 920,
+      "timed_pair": false,
+      "primary": true,
+      "C": 1.0
+    },
+    {
+      "speaker": "yweweler",
+      "method": "random",
+      "seed": 2,
+      "repeat": 0,
+      "budget": 920,
+      "timed_pair": false,
+      "primary": true,
+      "C": 1.0
+    },
+    {
+      "speaker": "yweweler",
+      "method": "random",
+      "seed": 3,
+      "repeat": 0,
+      "budget": 920,
+      "timed_pair": false,
+      "primary": true,
+      "C": 1.0
+    },
+    {
+      "speaker": "yweweler",
+      "method": "random",
+      "seed": 4,
+      "repeat": 0,
+      "budget": 920,
+      "timed_pair": false,
+      "primary": true,
+      "C": 1.0
+    }
+  ],
+  "retention_rule": "64/175 of training rows, rounded up to a multiple of the class count",
+  "rule_origin": "AudioMNIST v6 development: 6400/17500; no FSDD tuning",
+  "origin_protocol_hash": "c745623265de08a07a0558a9d853c5d2ca1a9a94780f1a054a43ed51d38e3916",
+  "origin_experiment_hash": "4150522b7bedf915fd3671737735e62228eeb0e3396906163b97d1d17aeb0fa2",
+  "primary": "pooled held-out-speaker full accuracy minus mean of 5 random-subset seed accuracies",
+  "accuracy_margin_pp": 1.0,
+  "uncertainty": "exploratory 2000-replicate speaker-block bootstrap; 6 speakers, overlapping fold training sets; not a powered noninferiority trial",
+  "timing": "3 paired uncached complete selection/decode/preprocess/encode/head-fit repeats per fold; alternate AB/BA; one process, two CPU threads, warm resident encoder",
+  "exclusions": "shared inventory/provenance, model startup, synthetic raw-audio and classifier warm-up, checkpoint writes, shared evaluation encoding/prediction",
+  "numerical": "fresh vectors used for actual training; fixed batch procedure; repeats assessed after model locking",
+  "packages": {
+    "numpy": "1.26.4",
+    "scipy": "1.17.1",
+    "pandas": "3.0.5",
+    "soundfile": "0.14.0",
+    "librosa": "0.11.0",
+    "torch": "2.6.0+cu126",
+    "torchaudio": "2.6.0+cu126",
+    "transformers": "4.57.6",
+    "scikit-learn": "1.9.0"
+  }
+}

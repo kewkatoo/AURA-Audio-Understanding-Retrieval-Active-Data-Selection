@@ -1,0 +1,15 @@
+{
+  "identity": "a73a99de52536fde",
+  "job": {
+    "method": "mfcc_representative",
+    "budget": 100,
+    "seed": 3,
+    "C": 1.0
+  },
+  "selection_seconds": 0.6212698000017554,
+  "fit_seconds": 0.0721072000451386,
+  "artifacts": {
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\acquisition_cost_v6\\jobs\\mfcc_representative_B100_seed3\\selection.json": "6047f995b333677ca90f315897767731778ac4abbe4e260d2c9ec02e5ca0d34c",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\acquisition_cost_v6\\jobs\\mfcc_representative_B100_seed3\\model.joblib": "36902a56623486c0906332b3b06546c6e5538ba715c8e9a0ffa13eeaada134c7"
+  }
+}

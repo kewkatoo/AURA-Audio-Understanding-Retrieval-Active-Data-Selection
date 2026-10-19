@@ -18,6 +18,8 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import json
+from dataclasses import asdict
 import logging
 import sys
 import time
@@ -28,9 +30,10 @@ import numpy as np
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from aura.config import AuraConfig
+from aura.provenance import PIPELINE_VERSION, source_fingerprint, runtime_versions
 from aura.cache.store import CacheStore, file_content_hash, config_fingerprint, make_cache_key
 from aura.ingest.dataset import FilteredSpeechCommands, SampleRecord
-from aura.ingest.audio import process_audio, energy_based_vad
+from aura.ingest.audio import process_audio
 from aura.scoring.features import extract_features, DSPFeatures
 from aura.scoring.quality import fit_quality_norm_stats, compute_quality_score, QualityNormStats
 from aura.encoders.wav2vec2 import Wav2Vec2Encoder
@@ -43,6 +46,23 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(mess
 logger = logging.getLogger("prepare_data")
 
 
+def quality_signature(config: AuraConfig) -> str:
+    return config_fingerprint({"features": audio_preprocess_config_dict(config),
+                               "dataset": config.dataset.name, "classes": sorted(config.dataset.classes)})
+
+
+def load_training_stats(config: AuraConfig) -> QualityNormStats:
+    path = Path(config.paths.metadata_dir) / "quality_norm_stats.json"
+    if not path.exists():
+        raise ValueError("Run train first: persisted training quality statistics are missing")
+    payload = json.loads(path.read_text())
+    train_path = Path(config.paths.metadata_dir) / "train.parquet"
+    if (payload["signature"] != quality_signature(config) or not train_path.exists()
+            or payload["train_metadata_hash"] != file_content_hash(train_path)):
+        raise ValueError("Training quality statistics do not match current code/config/train artifacts")
+    return QualityNormStats.from_dict(payload["stats"])
+
+
 def audio_preprocess_config_dict(config: AuraConfig) -> dict:
     return {
         "target_sample_rate": config.audio.sample_rate,
@@ -52,15 +72,22 @@ def audio_preprocess_config_dict(config: AuraConfig) -> dict:
         "vad_frame_ms": config.audio.vad_frame_ms,
         "vad_hop_ms": config.audio.vad_hop_ms,
         "vad_energy_percentile": config.audio.vad_energy_percentile,
+        "vad_noise_margin_db": config.audio.vad_noise_margin_db,
+        "vad_min_rms": config.audio.vad_min_rms,
+        "pipeline_version": PIPELINE_VERSION,
+        "source_fingerprint": source_fingerprint(),
+        "runtime_versions": runtime_versions(),
     }
 
 
-def encoder_config_dict(config: AuraConfig) -> dict:
+def encoder_config_dict(config: AuraConfig, encoder=None) -> dict:
     return {
         "name": config.encoder.name,
         "checkpoint": config.encoder.checkpoint,
         "pooling": config.encoder.pooling,
         "normalize": config.encoder.normalize,
+        "revision": encoder.info.revision if encoder is not None else None,
+        "batching": "equal-length-unpadded-v2",
     }
 
 
@@ -76,9 +103,15 @@ def process_split(
     """Processes one split. If norm_stats is None (train split), fits it
     from this split's own features; otherwise reuses the passed-in stats
     (validation/test) to avoid leakage."""
+    if split not in {"train", "validation", "test"}:
+        raise ValueError(f"Unknown split: {split}")
+    if split != "train" and norm_stats is None:
+        raise ValueError("Validation/test require persisted training quality statistics")
+    if not records or any(record.split != split for record in records):
+        raise ValueError("Records must be nonempty and belong to the requested split")
     preprocess_cfg = audio_preprocess_config_dict(config)
     preprocess_cfg_hash = config_fingerprint(preprocess_cfg)
-    enc_cfg = encoder_config_dict(config)
+    enc_cfg = encoder_config_dict(config, encoder)
     enc_cfg_hash = config_fingerprint(enc_cfg)
 
     all_features: list[DSPFeatures] = []
@@ -91,36 +124,27 @@ def process_split(
         audio_hash = file_content_hash(record.audio_path)
         feature_key = make_cache_key(audio_hash, preprocess_cfg_hash, namespace="features")
 
+        processed_audio = process_audio(
+            record.audio_path,
+            target_sample_rate=config.audio.sample_rate,
+            do_mono=config.audio.mono, do_normalize=config.audio.normalize,
+            do_vad=config.audio.vad, do_trim=config.audio.vad,
+            vad_frame_ms=config.audio.vad_frame_ms, vad_hop_ms=config.audio.vad_hop_ms,
+            vad_energy_percentile=config.audio.vad_energy_percentile,
+            vad_noise_margin_db=config.audio.vad_noise_margin_db,
+            vad_min_rms=config.audio.vad_min_rms,
+        )
         cached = feature_cache.get(feature_key)
         if cached is not None:
-            processed_audio, features = cached
+            features = cached
             cache_hits_features += 1
         else:
-            processed_audio = process_audio(
-                record.audio_path,
-                target_sample_rate=preprocess_cfg["target_sample_rate"],
-                do_mono=preprocess_cfg["mono"],
-                do_normalize=preprocess_cfg["normalize"],
-                do_vad=preprocess_cfg["vad"],
-                do_trim=preprocess_cfg["vad"],
-                vad_frame_ms=preprocess_cfg["vad_frame_ms"],
-                vad_hop_ms=preprocess_cfg["vad_hop_ms"],
-                vad_energy_percentile=preprocess_cfg["vad_energy_percentile"],
-            )
-            is_speech = None
-            if preprocess_cfg["vad"] and len(processed_audio.waveform) > 0:
-                is_speech = energy_based_vad(
-                    processed_audio.waveform, processed_audio.sample_rate,
-                    frame_ms=preprocess_cfg["vad_frame_ms"],
-                    hop_ms=preprocess_cfg["vad_hop_ms"],
-                    energy_percentile=preprocess_cfg["vad_energy_percentile"],
-                )
             features = extract_features(
-                processed_audio.waveform, processed_audio.sample_rate,
-                speech_ratio=processed_audio.speech_ratio, is_speech=is_speech,
+                processed_audio.source_waveform, processed_audio.sample_rate,
+                speech_ratio=processed_audio.speech_ratio, is_speech=processed_audio.source_activity,
                 frame_ms=preprocess_cfg["vad_frame_ms"], hop_ms=preprocess_cfg["vad_hop_ms"],
             )
-            feature_cache.set(feature_key, (processed_audio, features))
+            feature_cache.set(feature_key, features)
             cache_misses_features += 1
 
         all_features.append(features)
@@ -164,6 +188,9 @@ def process_split(
     )
 
     freshly_computed: dict[str, np.ndarray] = {}
+    order = sorted(range(len(to_encode_waveforms)), key=lambda i: len(to_encode_waveforms[i]))
+    to_encode_waveforms = [to_encode_waveforms[i] for i in order]
+    to_encode_records = [to_encode_records[i] for i in order]
     batch_size = config.encoder.batch_size
     for start in range(0, len(to_encode_waveforms), batch_size):
         batch_waveforms = to_encode_waveforms[start:start + batch_size]
@@ -247,20 +274,13 @@ def main():
         sample_limits = {k: args.sample_limit_override for k in sample_limits}
 
     norm_stats: QualityNormStats | None = None
-    # Process train first (if requested) since validation/test quality
-    # normalization depends on train's fitted stats. If train isn't in
-    # args.splits (e.g. a validation-only rerun), norm_stats stays None and
-    # each processed split fits its own stats -- logged as a warning so
-    # this doesn't silently happen in a full run.
+    # Evaluation-only runs must reuse verified training statistics.
     ordered_splits = [s for s in ["train", "validation", "test"] if s in args.splits]
     if "train" not in ordered_splits:
-        logger.warning(
-            "Processing without 'train' split: quality-score normalization "
-            "stats will be fit per-split rather than reused from train. "
-            "This is fine for isolated smoke tests but NOT for a real run."
-        )
+        norm_stats = load_training_stats(config)
 
     for split in ordered_splits:
+        split_started = time.perf_counter()
         logger.info(f"=== Processing split: {split} ===")
         dataset = FilteredSpeechCommands(
             root=config.dataset.root,
@@ -280,11 +300,26 @@ def main():
 
         metadata_path = Path(config.paths.metadata_dir) / f"{split}.parquet"
         save_metadata_parquet(rows, metadata_path)
+        if split == "train":
+            (metadata_path.parent / "quality_norm_stats.json").write_text(json.dumps({
+                "signature": quality_signature(config), "stats": norm_stats.to_dict(),
+                "train_metadata_hash": file_content_hash(metadata_path),
+            }, indent=2))
         logger.info(f"[{split}] saved metadata: {metadata_path} ({len(rows)} rows)")
 
         embedding_matrix_path = Path(config.paths.embeddings_dir) / f"{split}.npy"
         embedding_index_path = Path(config.paths.embeddings_dir) / f"{split}_index.parquet"
         save_embedding_matrix(embedding_matrix, sample_ids, embedding_matrix_path, embedding_index_path)
+        manifest = {
+            "pipeline_version": PIPELINE_VERSION, "source_fingerprint": source_fingerprint(),
+            "runtime_versions": runtime_versions(), "config": asdict(config),
+            "encoder": asdict(encoder.info), "split": split, "samples": len(rows),
+            "elapsed_seconds": time.perf_counter() - split_started,
+            "artifacts": {str(path.resolve()): file_content_hash(path) for path in
+                          (metadata_path, embedding_matrix_path, embedding_index_path,
+                           Path(config.paths.metadata_dir) / "quality_norm_stats.json")},
+        }
+        (metadata_path.parent / f"{split}_manifest.json").write_text(json.dumps(manifest, indent=2))
         logger.info(
             f"[{split}] saved embeddings: {embedding_matrix_path} "
             f"shape={embedding_matrix.shape}"

@@ -115,6 +115,11 @@ def compute_quality_score(
         + weights["rms_stability"] * rms_stability_norm
     )
 
+    # Silence/no detected activity must not win on clipping avoidance
+    # or constant-energy stability. The activity detector remains heuristic.
+    if features.rms < 1e-4 or features.speech_ratio <= 0:
+        quality_score = 0.0
+
     return QualityScore(
         snr_norm=snr_norm,
         clipping_component=clipping_component,

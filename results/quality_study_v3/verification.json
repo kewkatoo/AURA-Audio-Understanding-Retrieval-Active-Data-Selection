@@ -1,0 +1,12 @@
+{
+  "unique_oof_records": 2000,
+  "maximum_folds_per_speaker": 1,
+  "maximum_clean_score_discrepancy": 5.551115123125783e-17,
+  "versions": {
+    "scikit-learn": "1.9.0",
+    "numpy": "1.26.4",
+    "scipy": "1.17.1",
+    "pandas": "3.0.5",
+    "pyarrow": "25.0.1"
+  }
+}

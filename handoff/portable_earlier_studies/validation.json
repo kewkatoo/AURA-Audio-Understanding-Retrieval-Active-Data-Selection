@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-19",
+  "complete": true,
+  "all_checks_passed": true,
+  "results": [
+    {
+      "stage": "duplicate-control",
+      "exit_code": 0,
+      "summary": {
+        "all_checks_passed": true,
+        "stage": "duplicate-control",
+        "models": 25,
+        "raw_hashes_checked": 30769,
+        "mapped_paths": 30879,
+        "baseline_files": 2060,
+        "scope": "Relocated original semantic verifier: hashes, cohorts, selections, saved metrics and cost/numerical audits where applicable; no model fitting or report writes."
+      },
+      "error_tail": null
+    },
+    {
+      "stage": "cost",
+      "exit_code": 0,
+      "summary": {
+        "all_checks_passed": true,
+        "stage": "cost",
+        "models": 56,
+        "raw_hashes_checked": 22500,
+        "mapped_paths": 22732,
+        "baseline_files": 2060,
+        "scope": "Relocated original semantic verifier: hashes, cohorts, selections, saved metrics and cost/numerical audits where applicable; no model fitting or report writes."
+      },
+      "error_tail": null
+    },
+    {
+      "stage": "audiomnist",
+      "exit_code": 0,
+      "summary": {
+        "all_checks_passed": true,
+        "stage": "audiomnist",
+        "models": 101,
+        "raw_hashes_checked": 30000,
+        "mapped_paths": 30338,
+        "baseline_files": 2060,
+        "scope": "Relocated original semantic verifier: hashes, cohorts, selections, saved metrics and cost/numerical audits where applicable; no model fitting or report writes."
+      },
+      "error_tail": null
+    }
+  ],
+  "unique_copied_raw_recordings": 60769,
+  "regression": {
+    "passed": 112,
+    "skipped": 1,
+    "warnings": 1
+  },
+  "scope": "Physical copied evidence on the same Windows machine; original v5/v6 semantic checks, no retraining or retiming.",
+  "negative_prepared_array_test": {
+    "passed": true,
+    "stage": "cost",
+    "missing_copy_rejected": true,
+    "original_remained_accessible": true,
+    "copy_restored_and_hash_checked": true,
+    "exit_code": 1
+  }
+}

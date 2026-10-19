@@ -1,0 +1,1 @@
+Interrupted before model evaluation because regression tests overlapped with timed work. Preserve for provenance; exclude every timing here from final analysis. A fresh sequential timing run uses results/acquisition_cost_v6.

@@ -24,6 +24,7 @@ class EncoderInfo:
     pooling: str
     l2_normalized: bool
     device: str
+    revision: str | None = None
 
 
 class AudioEncoder(ABC):

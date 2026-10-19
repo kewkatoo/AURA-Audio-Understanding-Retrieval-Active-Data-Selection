@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-19",
+  "scope": "Clean virtual-environment validation supplement; excludes installed venv and disposable pytest cache.",
+  "baseline_snapshot_hash": "646d5bd6141dfeaccd19a134482e8182863f550cb4ecd3b6e939abb9cc0887f8",
+  "files": {
+    "handoff/clean_environment_20261019/install_report.json": "42a3e87f0794831c68bda43a738611133623f2564b3908db74841a549967db17",
+    "handoff/clean_environment_20261019/installation.json": "d37fd129771a0212d7be7484dddb01ca87b6b6eb19862066efb9107ee8776de3",
+    "handoff/clean_environment_20261019/isolation.log": "88704a31408ef95b3c3176aa9f2d61114e1587f0ae403c6b28c81a2a30d6c131",
+    "handoff/clean_environment_20261019/packages.log": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+    "handoff/clean_environment_20261019/raw_encoder.log": "0634f34962b46c634acaa55e4082d8a9b0a774d6b673a63b952007d15343b089",
+    "handoff/clean_environment_20261019/README.md": "e0fe8fcd37eccf3e22d70f3606275924c444b19582407c8f05855a661bfe09f4",
+    "handoff/clean_environment_20261019/regression.log": "87a27fc6df79ac7585409cc5d78ac787f692d4224cd4fbd16c9e6809656a87be",
+    "handoff/clean_environment_20261019/saved_v7_predictions.log": "fae45fb8312cfe11731506209c304d7f5e4d78268afe6688a1ae02cad2f6e930",
+    "handoff/clean_environment_20261019/snapshot_and_versions.log": "ded3867ba8149bf614c0a2086c4a22172aa903a8c21532779a45e8aaf8f4d455",
+    "handoff/clean_environment_20261019/tests.xml": "c2234806481fee2e0526251451c75b6d83e5fb2764084313694b3b6decae3c82",
+    "handoff/clean_environment_20261019/validate.py": "f1bd63ca640bb4160121857e7a7dcd89af068bf6b86ce5de4dfe6711113feb7e",
+    "handoff/clean_environment_20261019/validation.json": "6df6bb20da8e7d73a886c61b002e0463217b177fe517df64395c64ba240cba24",
+    "VALIDATION_UPDATE.md": "3a2a4d80aefc9ba2f35adabc826f26e3e42a689976b55b8d13dcb1dd0fde2a34"
+  }
+}

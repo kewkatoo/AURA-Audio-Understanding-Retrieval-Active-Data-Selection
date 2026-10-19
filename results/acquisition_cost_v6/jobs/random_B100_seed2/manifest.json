@@ -1,0 +1,15 @@
+{
+  "identity": "c5df74be54b93f49",
+  "job": {
+    "method": "random",
+    "budget": 100,
+    "seed": 2,
+    "C": 1.0
+  },
+  "selection_seconds": 0.09672059997683391,
+  "fit_seconds": 0.06607770000118762,
+  "artifacts": {
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\acquisition_cost_v6\\jobs\\random_B100_seed2\\selection.json": "6ecf10b70f948a236d367f53018dc51c8bce3839fb817f964a9c4d5e8a842cf4",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\acquisition_cost_v6\\jobs\\random_B100_seed2\\model.joblib": "78d4836269b697d2bbd240108637f8aceb7142073732cae44d6c18fcaeda8b9d"
+  }
+}

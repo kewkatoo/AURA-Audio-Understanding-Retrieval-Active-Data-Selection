@@ -112,6 +112,8 @@ class FilteredSpeechCommands:
         """
         if sample_limit is None:
             return list(self._records)
+        if isinstance(sample_limit, bool) or not isinstance(sample_limit, int) or sample_limit <= 0:
+            raise ValueError("sample_limit must be a positive integer or None")
 
         import random
 
@@ -120,15 +122,16 @@ class FilteredSpeechCommands:
             by_class.setdefault(r.label, []).append(r)
 
         rng = random.Random(seed)
-        for label in by_class:
+        for label in sorted(by_class):
             rng.shuffle(by_class[label])
 
-        n_classes = len(by_class)
-        per_class = max(1, sample_limit // n_classes)
+        from aura.selection.utils import allocate_budget_per_class
+        allocation = allocate_budget_per_class(list(by_class), sample_limit,
+                                               {c: len(recs) for c, recs in by_class.items()})
 
         selected: list[SampleRecord] = []
-        for label, recs in by_class.items():
-            selected.extend(recs[:per_class])
+        for label in sorted(by_class):
+            selected.extend(by_class[label][:allocation[label]])
 
         # Trim any overshoot from rounding, deterministically.
         rng.shuffle(selected)

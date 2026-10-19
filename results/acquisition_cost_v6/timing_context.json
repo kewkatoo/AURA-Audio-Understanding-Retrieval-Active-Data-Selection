@@ -1,0 +1,20 @@
+{
+  "encoder_setup_seconds": 1.388676700007636,
+  "descriptor_normalization_seconds": 0.026137299952097237,
+  "encoder": {
+    "name": "wav2vec2",
+    "checkpoint": "facebook/wav2vec2-base",
+    "embedding_dim": 768,
+    "pooling": "mean",
+    "l2_normalized": true,
+    "device": "cuda",
+    "revision": "0b5b8e868dd84f03fd87d01f9c4ff0f080fecfe8"
+  },
+  "threads": 2,
+  "workers": 1,
+  "persistent_cache_reads": false,
+  "evaluation_costs_excluded": true,
+  "cuda_matmul_tf32": false,
+  "cudnn_tf32": true,
+  "numerical_sensitivity": "seed 0; fresh training/selection versus canonical, evaluated on shared canonical development embeddings"
+}

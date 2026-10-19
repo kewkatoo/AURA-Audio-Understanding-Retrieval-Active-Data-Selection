@@ -1,7 +1,6 @@
 """
-Deterministic DSP feature extraction, run on the *processed* (mono,
-resampled, normalized, VAD-trimmed) waveform produced by
-aura/ingest/audio.py.
+Deterministic DSP features. The pipeline supplies mono/resampled source
+audio BEFORE gain normalization or trimming, preserving recording defects.
 
 All outputs are plain Python floats / lists of floats so the resulting
 dict is directly serializable to Parquet/JSON with no custom encoding.
@@ -40,14 +39,14 @@ class DSPFeatures:
 
 def _frame_rms(waveform: np.ndarray, frame_length: int, hop_length: int) -> np.ndarray:
     if len(waveform) < frame_length:
-        return np.array([np.sqrt(np.mean(waveform.astype(np.float64) ** 2) + 1e-12)])
+        return np.array([np.sqrt(np.mean(waveform.astype(np.float64) ** 2))])
     frames = librosa.util.frame(waveform, frame_length=frame_length, hop_length=hop_length)
-    return np.sqrt(np.mean(frames.astype(np.float64) ** 2, axis=0) + 1e-12)
+    return np.sqrt(np.mean(frames.astype(np.float64) ** 2, axis=0))
 
 
 def compute_clipping_ratio(waveform: np.ndarray, threshold: float = 0.99) -> float:
     """Fraction of samples within `threshold` of full-scale amplitude
-    (waveform is assumed peak-normalized to [-1, 1] already)."""
+    measured on source audio before peak normalization)."""
     if len(waveform) == 0:
         return 0.0
     return float(np.mean(np.abs(waveform) >= threshold))
@@ -61,8 +60,8 @@ def estimate_snr_db(
     hop_ms: float = 10.0,
 ) -> float:
     """Rough SNR estimate: ratio of mean energy in speech-active frames to
-    mean energy in non-speech frames, in dB. Falls back to a fixed frame
-    energy split if no VAD mask is supplied. This is explicitly a coarse
+    mean energy in inactive frames, in dB. Recomputes activity when no
+    matching mask is supplied. This is explicitly a coarse
     proxy, not a calibrated SNR measurement -- documented as part of the
     "prototype acoustic quality score", not a perceptual metric.
     """
@@ -73,8 +72,8 @@ def estimate_snr_db(
     if is_speech is None or len(is_speech) != len(frame_energy):
         # Recompute a local VAD mask if none is provided or lengths
         # mismatch (e.g. features computed on a differently-trimmed signal).
-        median = np.median(frame_energy)
-        is_speech = frame_energy > median
+        from aura.ingest.audio import energy_based_vad
+        is_speech = energy_based_vad(waveform, sample_rate, frame_ms, hop_ms)
 
     speech_energy = frame_energy[is_speech]
     noise_energy = frame_energy[~is_speech]
@@ -98,7 +97,7 @@ def compute_rms_stability(frame_rms: np.ndarray) -> float:
     means more stable (consistent) energy across the utterance."""
     mean_rms = float(np.mean(frame_rms))
     std_rms = float(np.std(frame_rms))
-    if mean_rms < 1e-9:
+    if not np.isfinite(mean_rms) or mean_rms < 1e-9:
         return 0.0
     cv = std_rms / mean_rms
     stability = 1.0 - cv

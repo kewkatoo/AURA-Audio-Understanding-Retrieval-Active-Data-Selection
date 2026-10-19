@@ -1,0 +1,11 @@
+{
+  "full_accuracy": 0.6903333333333334,
+  "random_accuracy": 0.6670666666666667,
+  "gap_pp": 2.326666666666666,
+  "low_pp": 1.0199999999999994,
+  "high_pp": 3.6866666666666665,
+  "speakers": 6,
+  "recordings": 3000,
+  "mean_gap_within_one_point": false,
+  "exploratory_upper_within_one_point": false
+}

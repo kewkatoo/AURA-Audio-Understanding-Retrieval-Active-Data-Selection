@@ -1,0 +1,18 @@
+{
+  "strategy": "quality",
+  "budget": 400,
+  "setting": "default",
+  "C": 1.0,
+  "source_budget": 400,
+  "seed": 1,
+  "identity": "6a426b419b374a3c",
+  "selection_seconds": 1.1052370999823324,
+  "fit_seconds": 0.12907849997282028,
+  "distinct_speakers": 144,
+  "mean_quality": 0.5598872221540924,
+  "selection_path": "results\\scaling_v4\\jobs\\quality_B400_seed1\\selection.json",
+  "artifacts": {
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\scaling_v4\\jobs\\quality_B400_seed1\\selection.json": "165887b372f7c75bf9d9535d08b2b65017be63a056ed981103f1eee8d2af4a3b",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\scaling_v4\\jobs\\quality_B400_seed1\\model.joblib": "419a287fc5206f34fc354e6933b5bfdafc010ac736152385de29f59bfd38fd8c"
+  }
+}

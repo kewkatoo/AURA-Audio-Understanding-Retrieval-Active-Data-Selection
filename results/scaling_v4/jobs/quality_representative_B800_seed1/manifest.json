@@ -1,0 +1,21 @@
+{
+  "strategy": "quality_representative",
+  "budget": 800,
+  "setting": "retain=0.75",
+  "C": 1.0,
+  "source_budget": 800,
+  "seed": 1,
+  "identity": "2882a302d2c985cc",
+  "selection_seconds": 65.75311469996814,
+  "fit_seconds": 0.525857399974484,
+  "distinct_speakers": 445,
+  "mean_quality": 0.4797018574836595,
+  "selection_path": "results\\scaling_v4\\jobs\\quality_representative_B800_seed1\\selection.json",
+  "parallel_workers": 4,
+  "worker_pid": 27988,
+  "worker_script_hash": "0603b8312c457ed2ad326190b3cd5987b1f7b27b5254cc58dafab1659cb0516b",
+  "artifacts": {
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\scaling_v4\\jobs\\quality_representative_B800_seed1\\selection.json": "19be3c4381bb6f4e97e1b2860c7d15c67326dd38f30b750351bece9919070621",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\scaling_v4\\jobs\\quality_representative_B800_seed1\\model.joblib": "fa24554d53dee6b6358a744908b7d57034bccbf0aec41b3fe4860218436b28cf"
+  }
+}

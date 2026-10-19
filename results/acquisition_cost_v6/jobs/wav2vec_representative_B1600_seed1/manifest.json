@@ -1,0 +1,15 @@
+{
+  "identity": "359752d4eedc137b",
+  "job": {
+    "method": "wav2vec_representative",
+    "budget": 1600,
+    "seed": 1,
+    "C": 1.0
+  },
+  "selection_seconds": 62.04541840002639,
+  "fit_seconds": 0.34341969998786226,
+  "artifacts": {
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\acquisition_cost_v6\\jobs\\wav2vec_representative_B1600_seed1\\selection.json": "2b4efe14e3ab02ce2a543b191d99c49e82c5b8b3c254a9a53cf5b3ceae5064f8",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\acquisition_cost_v6\\jobs\\wav2vec_representative_B1600_seed1\\model.joblib": "9b76975c2350ac12ac254caf84bf89c1c1ba88a75798a4807636ed3604c8be2d"
+  }
+}

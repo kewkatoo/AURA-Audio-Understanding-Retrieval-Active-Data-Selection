@@ -1,0 +1,595 @@
+{
+  "arguments": {
+    "data_root": "data/scaling_v4",
+    "output_dir": "results/scaling_v4",
+    "workers": 4
+  },
+  "controller_hash": "0603b8312c457ed2ad326190b3cd5987b1f7b27b5254cc58dafab1659cb0516b",
+  "protocol_hash": "cbd594db949f1789bf3362b3853155bd97e8d93d8cda1b3c672c18f4b41bf0f1",
+  "reused_serial_checkpoints": [
+    "results\\scaling_v4\\jobs\\random_B100_seed0\\manifest.json",
+    "results\\scaling_v4\\jobs\\random_B100_seed1\\manifest.json",
+    "results\\scaling_v4\\jobs\\random_B100_seed2\\manifest.json",
+    "results\\scaling_v4\\jobs\\random_B100_seed3\\manifest.json",
+    "results\\scaling_v4\\jobs\\random_B100_seed4\\manifest.json",
+    "results\\scaling_v4\\jobs\\quality_B100_seed0\\manifest.json",
+    "results\\scaling_v4\\jobs\\quality_B100_seed1\\manifest.json",
+    "results\\scaling_v4\\jobs\\quality_B100_seed2\\manifest.json",
+    "results\\scaling_v4\\jobs\\quality_B100_seed3\\manifest.json",
+    "results\\scaling_v4\\jobs\\quality_B100_seed4\\manifest.json",
+    "results\\scaling_v4\\jobs\\diversity_B100_seed0\\manifest.json",
+    "results\\scaling_v4\\jobs\\diversity_B100_seed1\\manifest.json",
+    "results\\scaling_v4\\jobs\\diversity_B100_seed2\\manifest.json",
+    "results\\scaling_v4\\jobs\\diversity_B100_seed3\\manifest.json",
+    "results\\scaling_v4\\jobs\\diversity_B100_seed4\\manifest.json",
+    "results\\scaling_v4\\jobs\\combined_B100_seed0\\manifest.json",
+    "results\\scaling_v4\\jobs\\combined_B100_seed1\\manifest.json",
+    "results\\scaling_v4\\jobs\\combined_B100_seed2\\manifest.json",
+    "results\\scaling_v4\\jobs\\combined_B100_seed3\\manifest.json",
+    "results\\scaling_v4\\jobs\\combined_B100_seed4\\manifest.json",
+    "results\\scaling_v4\\jobs\\representative_B100_seed0\\manifest.json",
+    "results\\scaling_v4\\jobs\\representative_B100_seed1\\manifest.json",
+    "results\\scaling_v4\\jobs\\representative_B100_seed2\\manifest.json",
+    "results\\scaling_v4\\jobs\\representative_B100_seed3\\manifest.json",
+    "results\\scaling_v4\\jobs\\representative_B100_seed4\\manifest.json",
+    "results\\scaling_v4\\jobs\\quality_representative_B100_seed0\\manifest.json",
+    "results\\scaling_v4\\jobs\\quality_representative_B100_seed1\\manifest.json",
+    "results\\scaling_v4\\jobs\\quality_representative_B100_seed2\\manifest.json",
+    "results\\scaling_v4\\jobs\\quality_representative_B100_seed3\\manifest.json",
+    "results\\scaling_v4\\jobs\\quality_representative_B100_seed4\\manifest.json",
+    "results\\scaling_v4\\jobs\\random_B200_seed0\\manifest.json",
+    "results\\scaling_v4\\jobs\\random_B200_seed1\\manifest.json",
+    "results\\scaling_v4\\jobs\\random_B200_seed2\\manifest.json",
+    "results\\scaling_v4\\jobs\\random_B200_seed3\\manifest.json",
+    "results\\scaling_v4\\jobs\\random_B200_seed4\\manifest.json",
+    "results\\scaling_v4\\jobs\\quality_B200_seed0\\manifest.json",
+    "results\\scaling_v4\\jobs\\quality_B200_seed1\\manifest.json",
+    "results\\scaling_v4\\jobs\\quality_B200_seed2\\manifest.json",
+    "results\\scaling_v4\\jobs\\quality_B200_seed3\\manifest.json",
+    "results\\scaling_v4\\jobs\\quality_B200_seed4\\manifest.json",
+    "results\\scaling_v4\\jobs\\diversity_B200_seed0\\manifest.json",
+    "results\\scaling_v4\\jobs\\diversity_B200_seed1\\manifest.json",
+    "results\\scaling_v4\\jobs\\diversity_B200_seed2\\manifest.json",
+    "results\\scaling_v4\\jobs\\diversity_B200_seed3\\manifest.json",
+    "results\\scaling_v4\\jobs\\diversity_B200_seed4\\manifest.json",
+    "results\\scaling_v4\\jobs\\combined_B200_seed0\\manifest.json",
+    "results\\scaling_v4\\jobs\\combined_B200_seed1\\manifest.json",
+    "results\\scaling_v4\\jobs\\combined_B200_seed2\\manifest.json",
+    "results\\scaling_v4\\jobs\\combined_B200_seed3\\manifest.json",
+    "results\\scaling_v4\\jobs\\combined_B200_seed4\\manifest.json",
+    "results\\scaling_v4\\jobs\\representative_B200_seed0\\manifest.json",
+    "results\\scaling_v4\\jobs\\representative_B200_seed1\\manifest.json",
+    "results\\scaling_v4\\jobs\\representative_B200_seed2\\manifest.json",
+    "results\\scaling_v4\\jobs\\representative_B200_seed3\\manifest.json",
+    "results\\scaling_v4\\jobs\\representative_B200_seed4\\manifest.json",
+    "results\\scaling_v4\\jobs\\quality_representative_B200_seed0\\manifest.json",
+    "results\\scaling_v4\\jobs\\quality_representative_B200_seed1\\manifest.json",
+    "results\\scaling_v4\\jobs\\quality_representative_B200_seed2\\manifest.json",
+    "results\\scaling_v4\\jobs\\quality_representative_B200_seed3\\manifest.json",
+    "results\\scaling_v4\\jobs\\quality_representative_B200_seed4\\manifest.json",
+    "results\\scaling_v4\\jobs\\random_B400_seed0\\manifest.json",
+    "results\\scaling_v4\\jobs\\random_B400_seed1\\manifest.json",
+    "results\\scaling_v4\\jobs\\random_B400_seed2\\manifest.json",
+    "results\\scaling_v4\\jobs\\random_B400_seed3\\manifest.json",
+    "results\\scaling_v4\\jobs\\random_B400_seed4\\manifest.json",
+    "results\\scaling_v4\\jobs\\quality_B400_seed0\\manifest.json",
+    "results\\scaling_v4\\jobs\\quality_B400_seed1\\manifest.json",
+    "results\\scaling_v4\\jobs\\quality_B400_seed2\\manifest.json",
+    "results\\scaling_v4\\jobs\\quality_B400_seed3\\manifest.json",
+    "results\\scaling_v4\\jobs\\quality_B400_seed4\\manifest.json",
+    "results\\scaling_v4\\jobs\\diversity_B400_seed0\\manifest.json",
+    "results\\scaling_v4\\jobs\\diversity_B400_seed1\\manifest.json",
+    "results\\scaling_v4\\jobs\\diversity_B400_seed2\\manifest.json",
+    "results\\scaling_v4\\jobs\\diversity_B400_seed3\\manifest.json",
+    "results\\scaling_v4\\jobs\\diversity_B400_seed4\\manifest.json",
+    "results\\scaling_v4\\jobs\\combined_B400_seed0\\manifest.json",
+    "results\\scaling_v4\\jobs\\combined_B400_seed1\\manifest.json",
+    "results\\scaling_v4\\jobs\\combined_B400_seed2\\manifest.json",
+    "results\\scaling_v4\\jobs\\combined_B400_seed3\\manifest.json",
+    "results\\scaling_v4\\jobs\\combined_B400_seed4\\manifest.json"
+  ],
+  "new_jobs": [
+    {
+      "strategy": "representative",
+      "budget": 400,
+      "seed": 1,
+      "selection_seconds": 45.06371210003272,
+      "fit_seconds": 0.281180799996946
+    },
+    {
+      "strategy": "representative",
+      "budget": 400,
+      "seed": 3,
+      "selection_seconds": 45.16927970002871,
+      "fit_seconds": 0.27124480000929907
+    },
+    {
+      "strategy": "representative",
+      "budget": 400,
+      "seed": 2,
+      "selection_seconds": 45.353794099995866,
+      "fit_seconds": 0.2825693000340834
+    },
+    {
+      "strategy": "representative",
+      "budget": 400,
+      "seed": 0,
+      "selection_seconds": 45.539208900008816,
+      "fit_seconds": 0.26565020001726225
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 400,
+      "seed": 0,
+      "selection_seconds": 33.223733100050595,
+      "fit_seconds": 0.330444700026419
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 400,
+      "seed": 2,
+      "selection_seconds": 33.35855649999576,
+      "fit_seconds": 0.3108912000316195
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 400,
+      "seed": 1,
+      "selection_seconds": 33.65020040003583,
+      "fit_seconds": 0.31075080001028255
+    },
+    {
+      "strategy": "random",
+      "budget": 800,
+      "seed": 0,
+      "selection_seconds": 0.25741259998176247,
+      "fit_seconds": 0.4960727000143379
+    },
+    {
+      "strategy": "random",
+      "budget": 800,
+      "seed": 1,
+      "selection_seconds": 0.25209179997909814,
+      "fit_seconds": 0.5577763000037521
+    },
+    {
+      "strategy": "random",
+      "budget": 800,
+      "seed": 2,
+      "selection_seconds": 0.2520459999796003,
+      "fit_seconds": 0.5150482999742962
+    },
+    {
+      "strategy": "random",
+      "budget": 800,
+      "seed": 3,
+      "selection_seconds": 0.2538575000362471,
+      "fit_seconds": 0.567086199996993
+    },
+    {
+      "strategy": "random",
+      "budget": 800,
+      "seed": 4,
+      "selection_seconds": 0.257182199973613,
+      "fit_seconds": 0.3840495999902487
+    },
+    {
+      "strategy": "quality",
+      "budget": 800,
+      "seed": 0,
+      "selection_seconds": 1.2940262999618426,
+      "fit_seconds": 0.21829709998564795
+    },
+    {
+      "strategy": "quality",
+      "budget": 800,
+      "seed": 1,
+      "selection_seconds": 1.274336599977687,
+      "fit_seconds": 0.2258987000095658
+    },
+    {
+      "strategy": "quality",
+      "budget": 800,
+      "seed": 2,
+      "selection_seconds": 1.3018266999861225,
+      "fit_seconds": 0.22685679997084662
+    },
+    {
+      "strategy": "representative",
+      "budget": 400,
+      "seed": 4,
+      "selection_seconds": 43.1597454000148,
+      "fit_seconds": 0.30069730000104755
+    },
+    {
+      "strategy": "quality",
+      "budget": 800,
+      "seed": 3,
+      "selection_seconds": 1.228113800054416,
+      "fit_seconds": 0.2017432000138797
+    },
+    {
+      "strategy": "quality",
+      "budget": 800,
+      "seed": 4,
+      "selection_seconds": 1.232727899972815,
+      "fit_seconds": 0.22899289999622852
+    },
+    {
+      "strategy": "diversity",
+      "budget": 800,
+      "seed": 0,
+      "selection_seconds": 1.0358135999995284,
+      "fit_seconds": 0.4684102999744937
+    },
+    {
+      "strategy": "diversity",
+      "budget": 800,
+      "seed": 1,
+      "selection_seconds": 1.1292125000036322,
+      "fit_seconds": 0.4916712999693118
+    },
+    {
+      "strategy": "diversity",
+      "budget": 800,
+      "seed": 2,
+      "selection_seconds": 1.0709741999744438,
+      "fit_seconds": 0.5164991999627091
+    },
+    {
+      "strategy": "diversity",
+      "budget": 800,
+      "seed": 3,
+      "selection_seconds": 1.063269099977333,
+      "fit_seconds": 0.4955670000053942
+    },
+    {
+      "strategy": "diversity",
+      "budget": 800,
+      "seed": 4,
+      "selection_seconds": 1.019979999982752,
+      "fit_seconds": 0.44892920000711456
+    },
+    {
+      "strategy": "combined",
+      "budget": 800,
+      "seed": 0,
+      "selection_seconds": 2.231152599968482,
+      "fit_seconds": 0.42905539995990694
+    },
+    {
+      "strategy": "combined",
+      "budget": 800,
+      "seed": 1,
+      "selection_seconds": 2.210763600014616,
+      "fit_seconds": 0.42679599998518825
+    },
+    {
+      "strategy": "combined",
+      "budget": 800,
+      "seed": 2,
+      "selection_seconds": 2.088614800013602,
+      "fit_seconds": 0.4543201000196859
+    },
+    {
+      "strategy": "combined",
+      "budget": 800,
+      "seed": 3,
+      "selection_seconds": 2.14410889998544,
+      "fit_seconds": 0.4291429000440985
+    },
+    {
+      "strategy": "combined",
+      "budget": 800,
+      "seed": 4,
+      "selection_seconds": 2.214243099966552,
+      "fit_seconds": 0.4425955999759026
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 400,
+      "seed": 3,
+      "selection_seconds": 33.6738500999636,
+      "fit_seconds": 0.2777352999546565
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 400,
+      "seed": 4,
+      "selection_seconds": 33.52440130000468,
+      "fit_seconds": 0.3147993999882601
+    },
+    {
+      "strategy": "representative",
+      "budget": 800,
+      "seed": 0,
+      "selection_seconds": 84.59413460001815,
+      "fit_seconds": 0.46252659999299794
+    },
+    {
+      "strategy": "representative",
+      "budget": 800,
+      "seed": 1,
+      "selection_seconds": 83.95111040002666,
+      "fit_seconds": 0.6076792000094429
+    },
+    {
+      "strategy": "representative",
+      "budget": 800,
+      "seed": 2,
+      "selection_seconds": 83.49579290003749,
+      "fit_seconds": 0.5586952000157908
+    },
+    {
+      "strategy": "representative",
+      "budget": 800,
+      "seed": 3,
+      "selection_seconds": 83.98181009996915,
+      "fit_seconds": 0.6196155000361614
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 800,
+      "seed": 0,
+      "selection_seconds": 65.41790320002474,
+      "fit_seconds": 0.4712532000266947
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 800,
+      "seed": 1,
+      "selection_seconds": 65.75311469996814,
+      "fit_seconds": 0.525857399974484
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 800,
+      "seed": 2,
+      "selection_seconds": 65.40828709997004,
+      "fit_seconds": 0.5212658999953419
+    },
+    {
+      "strategy": "random",
+      "budget": 1600,
+      "seed": 0,
+      "selection_seconds": 0.2394633000367321,
+      "fit_seconds": 0.7620239999960177
+    },
+    {
+      "strategy": "random",
+      "budget": 1600,
+      "seed": 1,
+      "selection_seconds": 0.25758829998085275,
+      "fit_seconds": 0.794449099979829
+    },
+    {
+      "strategy": "random",
+      "budget": 1600,
+      "seed": 2,
+      "selection_seconds": 0.25282270001480356,
+      "fit_seconds": 0.7750081999693066
+    },
+    {
+      "strategy": "random",
+      "budget": 1600,
+      "seed": 3,
+      "selection_seconds": 0.27157809998607263,
+      "fit_seconds": 0.900806299992837
+    },
+    {
+      "strategy": "random",
+      "budget": 1600,
+      "seed": 4,
+      "selection_seconds": 0.2543417999986559,
+      "fit_seconds": 0.7047650000313297
+    },
+    {
+      "strategy": "representative",
+      "budget": 800,
+      "seed": 4,
+      "selection_seconds": 83.93867509998381,
+      "fit_seconds": 0.5837433999986388
+    },
+    {
+      "strategy": "quality",
+      "budget": 1600,
+      "seed": 1,
+      "selection_seconds": 1.177138700033538,
+      "fit_seconds": 0.41055280005093664
+    },
+    {
+      "strategy": "quality",
+      "budget": 1600,
+      "seed": 0,
+      "selection_seconds": 1.1955480999895371,
+      "fit_seconds": 0.41138890001457185
+    },
+    {
+      "strategy": "quality",
+      "budget": 1600,
+      "seed": 2,
+      "selection_seconds": 1.1642749999882653,
+      "fit_seconds": 0.41871130000799894
+    },
+    {
+      "strategy": "quality",
+      "budget": 1600,
+      "seed": 3,
+      "selection_seconds": 1.1917285999516025,
+      "fit_seconds": 0.41733109997585416
+    },
+    {
+      "strategy": "quality",
+      "budget": 1600,
+      "seed": 4,
+      "selection_seconds": 1.2703380000311881,
+      "fit_seconds": 0.4109572999877855
+    },
+    {
+      "strategy": "diversity",
+      "budget": 1600,
+      "seed": 0,
+      "selection_seconds": 1.1225138999870978,
+      "fit_seconds": 0.9537246999680065
+    },
+    {
+      "strategy": "diversity",
+      "budget": 1600,
+      "seed": 1,
+      "selection_seconds": 1.2705896000261419,
+      "fit_seconds": 1.0884427999844775
+    },
+    {
+      "strategy": "diversity",
+      "budget": 1600,
+      "seed": 2,
+      "selection_seconds": 1.3040392000111751,
+      "fit_seconds": 1.1441706000478007
+    },
+    {
+      "strategy": "diversity",
+      "budget": 1600,
+      "seed": 3,
+      "selection_seconds": 1.4056372999912128,
+      "fit_seconds": 1.0925725999986753
+    },
+    {
+      "strategy": "diversity",
+      "budget": 1600,
+      "seed": 4,
+      "selection_seconds": 1.4500033999793231,
+      "fit_seconds": 1.0323448000126518
+    },
+    {
+      "strategy": "combined",
+      "budget": 1600,
+      "seed": 0,
+      "selection_seconds": 2.412190900009591,
+      "fit_seconds": 0.8227358000003733
+    },
+    {
+      "strategy": "combined",
+      "budget": 1600,
+      "seed": 1,
+      "selection_seconds": 2.441042300022673,
+      "fit_seconds": 0.787902900017798
+    },
+    {
+      "strategy": "combined",
+      "budget": 1600,
+      "seed": 2,
+      "selection_seconds": 2.498107500025071,
+      "fit_seconds": 0.8083611999754794
+    },
+    {
+      "strategy": "combined",
+      "budget": 1600,
+      "seed": 3,
+      "selection_seconds": 2.512427999987267,
+      "fit_seconds": 0.7873906999593601
+    },
+    {
+      "strategy": "combined",
+      "budget": 1600,
+      "seed": 4,
+      "selection_seconds": 2.4967378999572247,
+      "fit_seconds": 0.8245589999714866
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 800,
+      "seed": 3,
+      "selection_seconds": 61.86236520000966,
+      "fit_seconds": 0.46049179998226464
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 800,
+      "seed": 4,
+      "selection_seconds": 61.22783270000946,
+      "fit_seconds": 0.42024549999041483
+    },
+    {
+      "strategy": "representative",
+      "budget": 1600,
+      "seed": 0,
+      "selection_seconds": 154.48347829998238,
+      "fit_seconds": 0.8612505000201054
+    },
+    {
+      "strategy": "representative",
+      "budget": 1600,
+      "seed": 1,
+      "selection_seconds": 154.80917970003793,
+      "fit_seconds": 0.7989502000273205
+    },
+    {
+      "strategy": "representative",
+      "budget": 1600,
+      "seed": 2,
+      "selection_seconds": 154.33402410004055,
+      "fit_seconds": 0.8011618000455201
+    },
+    {
+      "strategy": "representative",
+      "budget": 1600,
+      "seed": 3,
+      "selection_seconds": 154.09120299998904,
+      "fit_seconds": 0.7971881999983452
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 1600,
+      "seed": 0,
+      "selection_seconds": 117.71008290001191,
+      "fit_seconds": 0.7187621000339277
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 1600,
+      "seed": 1,
+      "selection_seconds": 117.30891780002275,
+      "fit_seconds": 0.6894940999918617
+    },
+    {
+      "strategy": "representative",
+      "budget": 1600,
+      "seed": 4,
+      "selection_seconds": 154.0867239999934,
+      "fit_seconds": 0.8576765000470914
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 1600,
+      "seed": 2,
+      "selection_seconds": 117.1400936000282,
+      "fit_seconds": 0.8204692999715917
+    },
+    {
+      "strategy": "full_pool",
+      "budget": 28755,
+      "seed": 0,
+      "selection_seconds": 0.007658099988475442,
+      "fit_seconds": 46.24036499997601
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 1600,
+      "seed": 3,
+      "selection_seconds": 108.819408499985,
+      "fit_seconds": 0.6012916000327095
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 1600,
+      "seed": 4,
+      "selection_seconds": 101.80512480001198,
+      "fit_seconds": 0.5653456000145525
+    }
+  ],
+  "workers": 4,
+  "threads_per_worker": 2,
+  "wall_seconds": 709.1171014999854,
+  "scope": "training-only execution scheduling; no evaluation data or parameter changes",
+  "timing_limit": "concurrent wall times include contention and cannot be treated as isolated algorithm benchmarks"
+}

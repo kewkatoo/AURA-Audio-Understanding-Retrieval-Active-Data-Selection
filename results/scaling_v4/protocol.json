@@ -1,0 +1,259 @@
+{
+  "partition_hash": "8a9db369ae372856aec933f11d9ba551934da3502c55814384ad4b9f3e530e9e",
+  "arguments": {
+    "config": "configs/experiment.v2.yaml",
+    "data_root": "data/scaling_v4",
+    "output_dir": "results/scaling_v4",
+    "prior_choices": "results/representative_v3/locked_choices.json",
+    "budgets": [
+      100,
+      200,
+      400,
+      800,
+      1600
+    ],
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "strategies": [
+      "random",
+      "quality",
+      "diversity",
+      "combined",
+      "representative",
+      "quality_representative"
+    ],
+    "chunk_size": 500
+  },
+  "jobs": [
+    {
+      "strategy": "random",
+      "budget": 100,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 100
+    },
+    {
+      "strategy": "quality",
+      "budget": 100,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 100
+    },
+    {
+      "strategy": "diversity",
+      "budget": 100,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 100
+    },
+    {
+      "strategy": "combined",
+      "budget": 100,
+      "setting": "alpha=1",
+      "C": 1.0,
+      "source_budget": 100
+    },
+    {
+      "strategy": "representative",
+      "budget": 100,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 100
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 100,
+      "setting": "retain=0.75",
+      "C": 1.0,
+      "source_budget": 100
+    },
+    {
+      "strategy": "random",
+      "budget": 200,
+      "setting": "default",
+      "C": 0.1,
+      "source_budget": 200
+    },
+    {
+      "strategy": "quality",
+      "budget": 200,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 200
+    },
+    {
+      "strategy": "diversity",
+      "budget": 200,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 200
+    },
+    {
+      "strategy": "combined",
+      "budget": 200,
+      "setting": "alpha=1",
+      "C": 1.0,
+      "source_budget": 200
+    },
+    {
+      "strategy": "representative",
+      "budget": 200,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 200
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 200,
+      "setting": "retain=0.9",
+      "C": 1.0,
+      "source_budget": 200
+    },
+    {
+      "strategy": "random",
+      "budget": 400,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 400
+    },
+    {
+      "strategy": "quality",
+      "budget": 400,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 400
+    },
+    {
+      "strategy": "diversity",
+      "budget": 400,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 400
+    },
+    {
+      "strategy": "combined",
+      "budget": 400,
+      "setting": "alpha=0.25",
+      "C": 1.0,
+      "source_budget": 400
+    },
+    {
+      "strategy": "representative",
+      "budget": 400,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 400
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 400,
+      "setting": "retain=0.75",
+      "C": 1.0,
+      "source_budget": 400
+    },
+    {
+      "strategy": "random",
+      "budget": 800,
+      "setting": "default",
+      "C": 0.1,
+      "source_budget": 800
+    },
+    {
+      "strategy": "quality",
+      "budget": 800,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 800
+    },
+    {
+      "strategy": "diversity",
+      "budget": 800,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 800
+    },
+    {
+      "strategy": "combined",
+      "budget": 800,
+      "setting": "alpha=0.25",
+      "C": 0.1,
+      "source_budget": 800
+    },
+    {
+      "strategy": "representative",
+      "budget": 800,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 800
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 800,
+      "setting": "retain=0.75",
+      "C": 1.0,
+      "source_budget": 800
+    },
+    {
+      "strategy": "random",
+      "budget": 1600,
+      "setting": "default",
+      "C": 0.1,
+      "source_budget": 800
+    },
+    {
+      "strategy": "quality",
+      "budget": 1600,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 800
+    },
+    {
+      "strategy": "diversity",
+      "budget": 1600,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 800
+    },
+    {
+      "strategy": "combined",
+      "budget": 1600,
+      "setting": "alpha=0.25",
+      "C": 0.1,
+      "source_budget": 800
+    },
+    {
+      "strategy": "representative",
+      "budget": 1600,
+      "setting": "default",
+      "C": 1.0,
+      "source_budget": 800
+    },
+    {
+      "strategy": "quality_representative",
+      "budget": 1600,
+      "setting": "retain=0.75",
+      "C": 1.0,
+      "source_budget": 800
+    },
+    {
+      "strategy": "full_pool",
+      "budget": 28755,
+      "setting": "default",
+      "C": 10.0,
+      "source_budget": 2000
+    }
+  ],
+  "source_fingerprint": "da6d02ce267eb32b0f5daa30adbb1ffaf2e6a867d1b1161ef0cbf3becef26026",
+  "selector_hash": "62ebdc62c524f4dd1d75e781beb8ecc1ab68f9e7910b5ec3d394eaf690f7c316",
+  "prior_choices_hash": "56f9baeafbdee76a23c39ee4bfd8ea13a0529413eca8d5f671296b8748c21d80",
+  "script_hash": "1a0c822db4d4279c759efd59faac96af38b4754c79cb4b3807352d28bdeceb9d",
+  "parameter_rule": "transfer prior tuning settings; largest lower/equal budget for new budgets",
+  "holdout_rule": "250 randomly chosen previously unseen official-training speakers; content duplicates excluded",
+  "no_new_tuning": true,
+  "previous_validation_or_test_loaded": false
+}

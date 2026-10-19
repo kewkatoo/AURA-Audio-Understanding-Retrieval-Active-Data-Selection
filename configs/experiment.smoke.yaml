@@ -28,7 +28,9 @@ audio:
   vad: true
   vad_frame_ms: 25.0
   vad_hop_ms: 10.0
-  vad_energy_percentile: 50.0
+  vad_energy_percentile: 20.0
+  vad_noise_margin_db: 6.0
+  vad_min_rms: 0.001
 
 encoder:
   name: wav2vec2

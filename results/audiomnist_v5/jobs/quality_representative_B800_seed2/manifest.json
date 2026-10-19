@@ -1,0 +1,17 @@
+{
+  "identity": "7e93c8ce30960fa0",
+  "job": {
+    "strategy": "quality_representative",
+    "budget": 800,
+    "setting": "retain=0.75",
+    "C": 1.0,
+    "source_budget": 800,
+    "seed": 2
+  },
+  "selection_seconds": 54.98166970000602,
+  "fit_seconds": 0.2537276999792084,
+  "artifacts": {
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\audiomnist_v5\\jobs\\quality_representative_B800_seed2\\selection.json": "de20f64f72ebd5566af4f06b9305b370309e9c71145fda49f960aa726421dcb4",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\audiomnist_v5\\jobs\\quality_representative_B800_seed2\\model.joblib": "34e2d7871da3390162447262bf0d5adf5a2448d0dac90c25a0897efaef44ded7"
+  }
+}

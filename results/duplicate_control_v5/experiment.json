@@ -1,0 +1,51 @@
+{
+  "status": "complete",
+  "verification": {
+    "all_checks_passed": true,
+    "models": 25,
+    "training_records": 28755,
+    "holdout_records": 2014,
+    "training_speakers": 1758,
+    "holdout_speakers": 250,
+    "redundant_training_copies": 702,
+    "raw_hashes_checked": 30769,
+    "training_preparation_seconds": 688.1240686000092,
+    "python": "3.11.0 (main, Oct 24 2022, 18:26:48) [MSC v.1933 64 bit (AMD64)]",
+    "packages": {
+      "numpy": "1.26.4",
+      "scipy": "1.17.1",
+      "pandas": "3.0.5",
+      "scikit-learn": "1.9.0",
+      "joblib": "1.5.3",
+      "threadpoolctl": "3.6.0",
+      "torch": "2.6.0+cu126",
+      "torchaudio": "2.6.0+cu126",
+      "transformers": "4.57.6",
+      "librosa": "0.11.0",
+      "soundfile": "0.14.0"
+    },
+    "script_hash": "56a26251a4460e9192e9f523bec83ce30d8987ceca9234f023776870adf97c5d",
+    "protocol_hash": "cb53219bf924b035de4f1eaefa840238b2fba2996406c33558f7542f1f8928e3"
+  },
+  "artifacts": {
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\duplicate_control_v5\\analysis_manifest.json": "a3d34363ea550479367537fd05e95b973b9b16debed603b8bf7f7c32b644903c",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\duplicate_control_v5\\comparison.png": "6218d47cc94f4fa888878e11b06d0268d7964b57e33de2453680c93291c8cd8b",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\duplicate_control_v5\\comparison.svg": "6c69d047519db4be9a71fcff26234a47090ee9a201520a7dad7ecc849f44a15d",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\duplicate_control_v5\\comparison_summary.csv": "d6ef04bc8fae0e6547af3c2af5589b2a35125b2f93248d4cea466b4100802a75",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\duplicate_control_v5\\execution.json": "d7756426f8ae5f56f29f03ca3a1bb0eef3daf322072d7665d97510f0a30e4d2e",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\duplicate_control_v5\\models_locked.json": "d3b932280da4cb62fc2fe69a0e3e02edc4633350a612e3419aef3668eab44f7c",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\duplicate_control_v5\\observed_costs.csv": "cebbd450ce05337c1bf8d32e90058bb0dcf486a1ec27df4d4ca93487f067e5ce",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\duplicate_control_v5\\predictions.csv.gz": "b111dfe78a43ed22b8877d1adedb0407fc65e8ad0c9dc527117c8d6dc8430870",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\duplicate_control_v5\\protocol.json": "cb53219bf924b035de4f1eaefa840238b2fba2996406c33558f7542f1f8928e3",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\duplicate_control_v5\\reference_predictions.csv.gz": "d193bf924453124cc862dc63068f5c67b8e101f0398ce17ecaf795db8070efda",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\duplicate_control_v5\\REPORT.md": "17b63f12352661c25ee3ef2faf73aed9766acc6bb3e3672003de5aa1c65395ba",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\duplicate_control_v5\\runs.csv": "36a974e438cb72f18726230c02db66dddbf0f0cd3f8e56c247a13db04e0f56e7",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\duplicate_control_v5\\speaker_bootstrap.csv": "e629622f6cc488b94afb993a7a7b7d97dd29194671278e577311d426fa23573b",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\duplicate_control_v5\\summary.csv": "af2eb63774a55e1ada573c4fb897b6c59fc603a1256a9cf066990dd0cc978acc",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\duplicate_control_v5\\verification.json": "afb10a5cd3cc2e16b36e10ec2d95618093ff54e0d1d56cc0973a788db08a2dce"
+  },
+  "data_manifests": {
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\data\\scaling_v4\\metadata\\train_manifest.json": "9498b60a0e5ab624b6ac97baa24f0265c2143142308b9677a0994185e4557d7d",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\data\\scaling_v4\\metadata\\holdout_manifest.json": "47d99a09c81f4aaa6e681a9117777c157b002e3c67506949ff371987362ea74f"
+  }
+}

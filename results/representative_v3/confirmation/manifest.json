@@ -1,0 +1,20 @@
+{
+  "role": "fresh confirmation on unused official-validation speakers",
+  "encoder": {
+    "name": "wav2vec2",
+    "checkpoint": "facebook/wav2vec2-base",
+    "embedding_dim": 768,
+    "pooling": "mean",
+    "l2_normalized": true,
+    "device": "cuda",
+    "revision": "0b5b8e868dd84f03fd87d01f9c4ff0f080fecfe8"
+  },
+  "samples": 372,
+  "speakers": 59,
+  "source_fingerprint": "da6d02ce267eb32b0f5daa30adbb1ffaf2e6a867d1b1161ef0cbf3becef26026",
+  "artifacts": {
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\representative_v3\\confirmation\\metadata.parquet": "2f3ddf7d52508ca621055f8e9de382f855a52b9a2ae3f2987f740b3ccbd2e1b3",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\representative_v3\\confirmation\\confirmation.npy": "e9923651e2f8c8191665d3cb95d21852aa7d882c5bbe95442a13493730456e98",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\representative_v3\\confirmation\\index.parquet": "09af13320cda2130687dda057843a7b601380cf47f5c04c51af89605cf1ac74f"
+  }
+}

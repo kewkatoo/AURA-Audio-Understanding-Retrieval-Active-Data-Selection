@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-19",
+  "baseline_snapshot_hash": "646d5bd6141dfeaccd19a134482e8182863f550cb4ecd3b6e939abb9cc0887f8",
+  "scope": "V7 read-only relocated-evidence verification utility, tests, documentation and outcomes; excludes copied evidence tree and Python caches.",
+  "files": {
+    "handoff/portable_verification/missing_copy.log": "6cfb2a58e63f9d8b4dd1a96a70dca2f5f3cdb757fd0bcb21f89df0ee9cf4a85f",
+    "handoff/portable_verification/README.md": "2120dddb6eb7c6f05d933e11d95fe24ff599f03bf53995b5b6ded1c8f03d9ecc",
+    "handoff/portable_verification/test_paths.py": "64aa37150b991ef559bb31a4c4a84fdef0f693d82aa9517c248602aa873f67b0",
+    "handoff/portable_verification/validation.json": "387b5c83fe80865e31d39c065f857d2fe3becd6f166b97f70b768fda6559972e",
+    "handoff/portable_verification/verify.py": "8773b5e6ffd33155dba5152da12a5e12443211f158af2e32e1080af97d5b9565",
+    "PORTABILITY_UPDATE.md": "c5acd00be2a206642030256b46214d4258afdb52efcb7153d7c45d56b57bec3b"
+  }
+}

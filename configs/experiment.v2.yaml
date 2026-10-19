@@ -1,0 +1,31 @@
+# Corrected pipeline; separate artifacts preserve the audited baseline.
+dataset:
+  name: speech_commands_v0.02
+  root: ./data/raw
+  classes: ["yes", "no", "up", "down", "left", "right", "on", "off", "stop", "go"]
+  sample_limit:
+    train: 2000
+    validation: 500
+    test: null
+audio:
+  sample_rate: 16000
+  mono: true
+  normalize: true
+  vad: true
+  vad_frame_ms: 25.0
+  vad_hop_ms: 10.0
+  vad_energy_percentile: 20.0
+  vad_noise_margin_db: 6.0
+  vad_min_rms: 0.001
+encoder:
+  name: wav2vec2
+  checkpoint: facebook/wav2vec2-base
+  pooling: mean
+  normalize: true
+  device: auto
+  batch_size: 16
+cache:
+  path: ./data/v2/cache
+paths:
+  metadata_dir: ./data/v2/metadata
+  embeddings_dir: ./data/v2/embeddings

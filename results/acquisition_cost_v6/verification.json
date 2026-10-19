@@ -1,0 +1,16 @@
+{
+  "all_checks_passed": true,
+  "models": 56,
+  "training_records": 17500,
+  "development_records": 5000,
+  "training_speakers": 35,
+  "development_speakers": 10,
+  "raw_hashes_checked": 22500,
+  "old_holdout_audio_representations_or_predictions_used": false,
+  "protocol_hash": "c745623265de08a07a0558a9d853c5d2ca1a9a94780f1a054a43ed51d38e3916",
+  "analysis_sources": {
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\scripts\\report_acquisition_cost.py": "d4b15f963ccb8a2ce1e10f039a7f15d0d1a210bb07e6611734550e0222756a66",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\scripts\\report_independent_study.py": "76b50513322a607d38e39ba01871556c8cb333a07365f58e19724936c10de038",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\scripts\\analyze_confirmation_uncertainty.py": "9ccaf276664a46da71b6f228d059f4124eb6a07a11e4d60573024a595144fd06"
+  }
+}

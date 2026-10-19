@@ -1,0 +1,13 @@
+{
+  "status": "complete",
+  "initial_pip": "22.3",
+  "initial_attempt": "Stopped after stalled large-wheel retrieval",
+  "bootstrap_pip": "26.2.1",
+  "bootstrap_exit_code": 0,
+  "requirements_install_exit_code": 0,
+  "archives_recorded": 63,
+  "shared_download_cache": true,
+  "site_packages_copied": false,
+  "virtual_environment": "venv/reproduction-20261019",
+  "pyvenv_config": "home = C:\\Users\\adity\\AppData\\Local\\Programs\\Python\\Python311\ninclude-system-site-packages = false\nversion = 3.11.0\nexecutable = C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\.venv\\Scripts\\python.exe\ncommand = C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\.venv\\Scripts\\python.exe -m venv C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\venv\\reproduction-20261019\n"
+}

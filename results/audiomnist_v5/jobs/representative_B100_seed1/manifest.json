@@ -1,0 +1,17 @@
+{
+  "identity": "4075d46ee4b6b6e6",
+  "job": {
+    "strategy": "representative",
+    "budget": 100,
+    "setting": "default",
+    "C": 1.0,
+    "source_budget": 100,
+    "seed": 1
+  },
+  "selection_seconds": 11.780508900003042,
+  "fit_seconds": 0.14834900002460927,
+  "artifacts": {
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\audiomnist_v5\\jobs\\representative_B100_seed1\\selection.json": "d49d3922ef93400e74cfd6e3f6fda8db38bb9a58c3cf772a334336a6f87f7817",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\audiomnist_v5\\jobs\\representative_B100_seed1\\model.joblib": "8f7d0c1cd7acb83d44c5b5da97fd6ae65b04ad9bf7935263dcfb8fcd23ab2bcb"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "identity": "8ba1386d954bcc9c",
+  "job": {
+    "speaker": "yweweler",
+    "method": "random",
+    "seed": 0,
+    "repeat": 0,
+    "budget": 920,
+    "timed_pair": true,
+    "primary": true,
+    "C": 1.0
+  },
+  "end_to_end_seconds": 7.19416860002093,
+  "head_seconds": 0.28541840001707897,
+  "session": "2026-10-18T15:03:40.110065+00:00",
+  "artifacts": {
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\cost_confirmation_v7\\jobs\\yweweler_random_seed0_rep0\\selection.json": "b3615382aad5821378813410f9b73bcff428b4747602d62b0cc7bf813fa2c019",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\cost_confirmation_v7\\jobs\\yweweler_random_seed0_rep0\\embeddings.npy": "79e34a58e4349c9b623b46bbc217b64135ecb1397813683a38a2afe359fa1b50",
+    "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\results\\cost_confirmation_v7\\jobs\\yweweler_random_seed0_rep0\\model.joblib": "742fbb239f59b1df64ae6eedce9469025453ec5c5c8171943622721d5ee1abfb"
+  }
+}

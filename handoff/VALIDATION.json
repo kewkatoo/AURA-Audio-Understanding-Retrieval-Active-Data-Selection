@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-19",
+  "tests": {
+    "passed": 102,
+    "skipped": 1,
+    "warnings": 1,
+    "warning": "Synthetic 100-sample silence input is shorter than the configured 400-sample FFT."
+  },
+  "pip_check": "No broken requirements found",
+  "independent_verification": {
+    "duplicate_control_models": 25,
+    "duplicate_control_raw_hashes": 30769,
+    "audiomnist_models": 101,
+    "audiomnist_raw_hashes": 30000,
+    "read_only_wrappers_passed": true,
+    "v7_saved_models_repredicted": 60,
+    "v7_raw_hashes": 3000
+  },
+  "frozen_v6_v7_artifact_hashes": "passed",
+  "core_source_fingerprint": "da6d02ce267eb32b0f5daa30adbb1ffaf2e6a867d1b1161ef0cbf3becef26026",
+  "clean_environment_install_tested": false,
+  "second_hardware_session_replication_tested": false
+}

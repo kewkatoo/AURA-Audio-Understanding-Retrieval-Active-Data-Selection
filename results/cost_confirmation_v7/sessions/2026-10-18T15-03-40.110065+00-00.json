@@ -1,0 +1,71 @@
+{
+  "session": "2026-10-18T15:03:40.110065+00:00",
+  "encoder": {
+    "name": "wav2vec2",
+    "checkpoint": "facebook/wav2vec2-base",
+    "embedding_dim": 768,
+    "pooling": "mean",
+    "l2_normalized": true,
+    "device": "cuda",
+    "revision": "0b5b8e868dd84f03fd87d01f9c4ff0f080fecfe8"
+  },
+  "model_startup_and_warmup_seconds": 5.473167799995281,
+  "cuda_matmul_tf32": false,
+  "cudnn_tf32": true,
+  "cudnn_version": 90501,
+  "cudnn_benchmark": false,
+  "deterministic_algorithms": false,
+  "attention_implementation": "sdpa",
+  "parameter_dtype": "torch.float32",
+  "threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 2,
+      "prefix": "libopenblas",
+      "filepath": "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\.venv\\Lib\\site-packages\\numpy.libs\\libopenblas64__v0.3.23-293-gc2f4bdbb-gcc_10_3_0-2bde3a66a51006b2b53eb373ff767a3f.dll",
+      "version": "0.3.23.dev",
+      "threading_layer": "pthreads",
+      "architecture": "Zen"
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 2,
+      "prefix": "libiomp",
+      "filepath": "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\.venv\\Lib\\site-packages\\torch\\lib\\libiomp5md.dll",
+      "version": null
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "prefix": "libiomp",
+      "filepath": "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\.venv\\Lib\\site-packages\\torch\\lib\\libiompstubs5md.dll",
+      "version": null
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 2,
+      "prefix": "vcomp",
+      "filepath": "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\.venv\\Lib\\site-packages\\sklearn\\.libs\\vcomp140.dll",
+      "version": null
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 2,
+      "prefix": "libscipy_openblas",
+      "filepath": "C:\\Users\\adity\\Downloads\\projects\\david ai\\aura_phase1\\.venv\\Lib\\site-packages\\scipy.libs\\libscipy_openblas-64eda39e79589aedb16f58e5547eb599.dll",
+      "version": "0.3.30",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    }
+  ],
+  "torch_cuda": "12.6",
+  "gpu": "NVIDIA GeForce RTX 4050 Laptop GPU",
+  "python": "3.11.0 (main, Oct 24 2022, 18:26:48) [MSC v.1933 64 bit (AMD64)]",
+  "threads": 2,
+  "workers": 1
+}

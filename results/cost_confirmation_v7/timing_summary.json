@@ -1,0 +1,14 @@
+{
+  "pairs": 18,
+  "full_median_seconds": 19.870261700009,
+  "random_median_seconds": 7.833377800008748,
+  "paired_ratio_median": 0.38221207137813784,
+  "paired_ratio_min": 0.32534468902823943,
+  "paired_ratio_max": 0.4166022574863329,
+  "median_paired_saving_percent": 61.77879286218622,
+  "random_faster_pairs": 18,
+  "sessions": 1,
+  "startup_seconds": [
+    5.473167799995281
+  ]
+}

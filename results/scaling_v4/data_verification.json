@@ -1,0 +1,19 @@
+{
+  "raw_hashes_unchanged": true,
+  "rows_match_partition": true,
+  "matrix_shape": [
+    28755,
+    768
+  ],
+  "unit_normalized_finite": true,
+  "train_speakers": 1758,
+  "training_preparation_seconds": 688.1240686000092,
+  "holdout_matrix_shape": [
+    2014,
+    768
+  ],
+  "holdout_speakers": 250,
+  "speaker_and_sample_overlap": 0,
+  "previously_seen_training_speaker_overlap": 0,
+  "quality_stats_match_candidate_extrema": true
+}
